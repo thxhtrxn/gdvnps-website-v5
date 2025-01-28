@@ -4,8 +4,7 @@
 	export let title: string;
 	export let desc: string;
 
-	let urlLocation: string;
-	onMount(() => (urlLocation = window.location.pathname));
+	export let urlLocation: string;
 </script>
 
 <svelte:head>
