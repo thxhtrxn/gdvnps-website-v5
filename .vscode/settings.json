@@ -1,0 +1,10 @@
+{
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"explorer.compactFolders": false,
+	"css.customData": [".vscode/tailwind.json"],
+	"editor.codeActionsOnSave": {
+		"source.fixAll.tslint": "always",
+		"source.fixAll.eslint": "always"
+	}
+}
