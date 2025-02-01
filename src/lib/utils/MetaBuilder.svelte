@@ -3,12 +3,11 @@
 
 	export let title: string;
 	export let desc: string;
-
 	export let urlLocation: string;
 </script>
 
 <svelte:head>
-	<title>{title} | GDVNPS</title>
+	<title>{title}</title>
 	<meta name="description" content={`${desc}`} />
 
 	<meta property="og:title" content={`${title}`} />

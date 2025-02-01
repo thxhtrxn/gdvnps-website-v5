@@ -3,7 +3,7 @@
 </script>
 
 <MetaBuilder
-	title="Trang chủ"
+	title="GDVNPS - GDPS Bởi Người Việt, Cho Người Việt"
 	desc="GDVNPS là một dự án Geometry Dash Private Server (GDPS) dành cho cộng đồng người chơi Geometry Dash tại Việt Nam"
 	urlLocation="/"
 />
