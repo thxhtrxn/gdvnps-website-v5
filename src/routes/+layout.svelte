@@ -1,8 +1,14 @@
 <script lang="ts">
-	import Navbar from '$lib/components/Navbar/Navbar.svelte';
-	import '../app.css';
+	import { Nav, NavItemsPC } from '$lib/components/Navbar';
+	import Footer from '$lib/components/Footer.svelte';
+	import '$lib/utils/app.css';
 	let { children } = $props();
 </script>
 
-<Navbar />
+<Nav>
+	<NavItemsPC />
+</Nav>
 {@render children()}
+<Footer>
+	<nav slot="footer_link" aria-label="Footer link" class=""></nav>
+</Footer>

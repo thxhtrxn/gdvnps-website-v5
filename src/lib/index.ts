@@ -1,1 +1,20 @@
-// place files you want to import through the `$lib` alias in this folder.
+export const web_domain: string | undefined = 'https://gdvnps.site';
+
+export const year: () => number | undefined = new Date().getUTCFullYear;
+
+export type AnchorLinkTarget = '_self' | '_blank' | '_parent' | '_top';
+
+export type TailwindFontSizeClass =
+	| 'text-xs'
+	| 'text-sm'
+	| 'text-base'
+	| 'text-lg'
+	| 'text-xl'
+	| 'text-2xl'
+	| 'text-3xl'
+	| 'text-4xl'
+	| 'text-5xl'
+	| 'text-6xl'
+	| 'text-7xl'
+	| 'text-8xl'
+	| 'text-9xl';

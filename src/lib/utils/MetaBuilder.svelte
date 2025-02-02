@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { web_domain } from '$lib';
 
 	export let title: string;
 	export let desc: string;
@@ -12,7 +12,7 @@
 
 	<meta property="og:title" content={`${title}`} />
 	<meta property="og:description" content={`${desc}`} />
-	<meta property="og:url" content={`https://gdvnps.site${urlLocation}`} />
+	<meta property="og:url" content={`${web_domain}${urlLocation}`} />
 
 	<meta name="twitter:title" content={`${title}`} />
 	<meta name="twitter:description" content={`${desc}`} />
