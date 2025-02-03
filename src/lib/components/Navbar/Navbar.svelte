@@ -1,9 +1,17 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	// export let openMenu: boolean = false;
 
 	// function openMenuHandler() {
 	// 	openMenu = !openMenu;
 	// }
+
+	function navigateToBrandPath(event: MouseEvent) {
+		if (event.button === 2) {
+			event.preventDefault();
+			goto('/brand');
+		}
+	}
 </script>
 
 <header class="navbar py-3.5">
@@ -12,7 +20,12 @@
 			class="relative flex w-full max-w-screen-xl items-center justify-between"
 			style="margin: 0 auto"
 		>
-			<div class="flex justify-start gap-2">
+			<!-- svelte-ignore a11y_no_static_element_interactions -->
+			<div
+				class="flex justify-start gap-2"
+				on:mouseup={navigateToBrandPath}
+				on:contextmenu|preventDefault
+			>
 				<div class="z-50 h-fit w-fit">
 					<a href="/" class="navbar__logo-link">
 						<img
