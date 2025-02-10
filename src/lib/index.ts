@@ -1,7 +1,5 @@
 export const web_domain: string | undefined = 'https://gdvnps.site';
 
-export const year: () => number | undefined = new Date().getUTCFullYear;
-
 export type AnchorLinkTarget = '_self' | '_blank' | '_parent' | '_top';
 
 export type TailwindFontSizeClass =
