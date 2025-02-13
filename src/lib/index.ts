@@ -1,5 +1,3 @@
-export const web_domain: string | undefined = 'https://gdvnps.site';
-
 export type AnchorLinkTarget = '_self' | '_blank' | '_parent' | '_top';
 
 export type TailwindFontSizeClass =
