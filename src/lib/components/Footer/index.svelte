@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Icon from '@iconify/svelte';
 	import FooterLayout from './FooterLayout.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import Dot from '$lib/components/Dot.svelte';
+	import Link from '../Link.svelte';
+	import Icon from '../Icon.svelte';
+	import Dot from '../Dot.svelte';
 
 	type FooterLinkObjType = {
 		id: number;
@@ -42,7 +42,9 @@
 			<div class="flex items-center justify-between gap-6 py-3">
 				<div class="flex items-center gap-4">
 					<img src="/gdvnps-logo-no-bg.svg" alt="GDVNPS's logo" width={38} height={38} />
-					<p class="text-base text-slate-300/90">Copyright © GDVNPS 2024-present</p>
+					<p class="copyright flex items-center text-base text-slate-300/90">
+						Copyright <Icon icon="copyright" size={17} className="mx-1" /> GDVNPS 2024-present
+					</p>
 				</div>
 				<div>
 					<a
@@ -51,7 +53,7 @@
 						class="inline-block"
 						title="Discord"
 					>
-						<Icon icon="ic:round-discord" width="34" height="34" />
+						<Icon icon="discord" size={34} />
 					</a>
 				</div>
 			</div>

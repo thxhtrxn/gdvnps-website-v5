@@ -3,7 +3,7 @@ export const icons = {
 	copyright: 'lucide:copyright'
 };
 
-export type KnownIcon = typeof icons;
+export type KnownIcon = keyof typeof icons;
 
 export type AnchorLinkTarget = '_self' | '_blank' | '_parent' | '_top';
 

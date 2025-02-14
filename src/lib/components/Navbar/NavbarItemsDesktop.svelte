@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Icon from '@iconify/svelte';
+	import Icon from '../Icon.svelte';
 	import Link from '../Link.svelte';
 
 	type NavLinkObjType = {
@@ -30,7 +30,7 @@
 <div class="hidden shrink lg:flex">
 	<div class="flex flex-wrap items-center gap-1">
 		<a href="https://discord.gg/SmBs7xGSWM" target="_blank" class="inline-block" title="Discord">
-			<Icon icon="ic:round-discord" width="24" height="24" />
+			<Icon icon="discord" size={24} />
 		</a>
 	</div>
 </div>
