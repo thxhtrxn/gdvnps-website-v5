@@ -8,7 +8,7 @@
 		className?: string | null;
 	}
 
-	const { icon, size, className }: IconPropsType = $props();
+	const { icon, size, className = '' }: IconPropsType = $props();
 </script>
 
 <span class={`site-icon ${className}`}>

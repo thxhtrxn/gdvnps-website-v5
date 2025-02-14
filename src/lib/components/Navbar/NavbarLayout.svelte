@@ -1,10 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	// export let openMenu: boolean = false;
-
-	// function openMenuHandler() {
-	// 	openMenu = !openMenu;
-	// }
+	export let openMenu: boolean = false;
 
 	function navigateToBrandPath(event: MouseEvent) {
 		if (event.button === 2) {
@@ -45,7 +41,7 @@
 </header>
 
 <style lang="scss" module>
-	@reference "$lib/utils/app.css";
+	@reference "$lib/assets/app.css";
 
 	.navbar {
 		@apply z-50 flex h-24 w-full items-center justify-center border-b border-transparent bg-transparent px-6 duration-150 lg:px-20;

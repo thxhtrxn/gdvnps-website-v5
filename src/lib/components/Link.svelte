@@ -56,7 +56,7 @@
 {/if}
 
 <style lang="scss" scoped>
-	@reference "$lib/utils/app.css";
+	@reference "$lib/assets/app.css";
 
 	.link {
 		@apply text-slate-300;

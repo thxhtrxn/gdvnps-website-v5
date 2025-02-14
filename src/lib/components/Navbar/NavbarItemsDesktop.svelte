@@ -1,23 +1,7 @@
 <script lang="ts">
+	import { navLinks } from '$lib';
 	import Icon from '../Icon.svelte';
 	import Link from '../Link.svelte';
-
-	type NavLinkObjType = {
-		id: number;
-		label: string;
-		href: string;
-	}[];
-
-	const navLinks: NavLinkObjType = [
-		{ id: 1, label: 'Tải xuống', href: '/download' },
-		{ id: 2, label: 'FAQ', href: '/faq' },
-		{ id: 3, label: 'Browser', href: '#browser' },
-		{
-			id: 4,
-			label: 'Dashboard',
-			href: 'https://gdvnps.ps.fhgdps.com/dashboard'
-		}
-	];
 </script>
 
 <ul class="hidden shrink flex-row items-center gap-12 text-base lg:flex">
