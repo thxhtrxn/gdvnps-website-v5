@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Icon from '@iconify/svelte';
-	import Link from '../UI/Link.svelte';
+	import Icon from '../Icon.svelte';
+	import Link from '../Link.svelte';
 
 	type NavLinkObjType = {
 		id: number;
@@ -11,7 +11,7 @@
 	const navLinks: NavLinkObjType = [
 		{ id: 1, label: 'Tải xuống', href: '/download' },
 		{ id: 2, label: 'FAQ', href: '/faq' },
-		{ id: 3, label: 'Browser', href: '/browser' },
+		{ id: 3, label: 'Browser', href: '#browser' },
 		{
 			id: 4,
 			label: 'Dashboard',
@@ -30,7 +30,7 @@
 <div class="hidden shrink lg:flex">
 	<div class="flex flex-wrap items-center gap-1">
 		<a href="https://discord.gg/SmBs7xGSWM" target="_blank" class="inline-block" title="Discord">
-			<Icon icon="ic:round-discord" width="24" height="24" />
+			<Icon icon="discord" size={24} />
 		</a>
 	</div>
 </div>
