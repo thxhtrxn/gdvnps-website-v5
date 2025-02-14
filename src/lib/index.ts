@@ -1,3 +1,10 @@
+export const icons = {
+	discord: 'ic:round-discord',
+	copyright: 'lucide:copyright'
+};
+
+export type KnownIcon = typeof icons;
+
 export type AnchorLinkTarget = '_self' | '_blank' | '_parent' | '_top';
 
 export type TailwindFontSizeClass =

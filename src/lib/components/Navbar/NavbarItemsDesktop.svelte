@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-	import Link from '../UI/Link.svelte';
+	import Link from '../Link.svelte';
 
 	type NavLinkObjType = {
 		id: number;
@@ -11,7 +11,7 @@
 	const navLinks: NavLinkObjType = [
 		{ id: 1, label: 'Tải xuống', href: '/download' },
 		{ id: 2, label: 'FAQ', href: '/faq' },
-		{ id: 3, label: 'Browser', href: '/browser' },
+		{ id: 3, label: 'Browser', href: '#browser' },
 		{
 			id: 4,
 			label: 'Dashboard',
