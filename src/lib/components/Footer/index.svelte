@@ -24,13 +24,25 @@
 
 <FooterLayout>
 	<div slot="footer_link" class="flex items-center justify-between lg:gap-5">
-		<nav
-			aria-label="Footer link"
-			class="grid grid-cols-2 flex-wrap items-center justify-center gap-x-16 gap-y-9 py-8 lg:grid lg:grid-cols-3 lg:gap-x-24 lg:gap-y-12"
-		>
-			{#each footerLinks as footerLink (footerLink.id)}
-				<Link variant="footer" href={footerLink.href} label={footerLink.label} />
-			{/each}
+		<nav class="flex flex-col gap-y-9 py-8 lg:gap-y-12">
+			<nav
+				aria-label="Footer link"
+				class="grid grid-cols-2 flex-wrap items-center justify-center gap-x-16 gap-y-9 lg:grid lg:grid-cols-3 lg:gap-x-24 lg:gap-y-12"
+			>
+				{#each footerLinks as footerLink (footerLink.id)}
+					<Link variant="footer" href={footerLink.href} label={footerLink.label} />
+				{/each}
+			</nav>
+			<div>
+				<a
+					href={discordLink}
+					target="_blank"
+					class="flex items-center gap-1.5 text-slate-300/90"
+					title="Discord"
+				>
+					<Icon icon="discord" size={28} /><span><p>Discord</p></span>
+				</a>
+			</div>
 		</nav>
 		<h1
 			class="hidden bg-gradient-to-l from-red-500 via-orange-500 to-yellow-500 bg-clip-text text-right text-7xl font-bold text-transparent lg:inline-block"
@@ -47,11 +59,6 @@
 					<p class="copyright flex items-center text-base text-slate-300/90">
 						Copyright <Icon icon="copyright" size={17} className="mx-1" /> GDVNPS 2024-present
 					</p>
-				</div>
-				<div>
-					<a href={discordLink} target="_blank" class="inline-block" title="Discord">
-						<Icon icon="discord" size={34} />
-					</a>
 				</div>
 			</div>
 			<div class="py-3">

@@ -29,7 +29,7 @@
 	<a
 		href={`${href}`}
 		onclick={onClickFn}
-		class={clsx('link', {
+		class={clsx('link', fontSize, {
 			navigation: variant === 'navigation'
 		})}>{label}</a
 	>
