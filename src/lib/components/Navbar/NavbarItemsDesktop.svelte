@@ -14,7 +14,7 @@
 <div class="hidden shrink lg:flex">
 	<div class="flex flex-wrap items-center gap-1">
 		<a href={discordLink} target="_blank" class="inline-block" title="Discord">
-			<Icon icon="discord" size={24} />
+			<Icon icon="discord" size={28} />
 		</a>
 	</div>
 </div>

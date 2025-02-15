@@ -10,7 +10,7 @@
 	const menuButtonHandler = () => (openMenu = !openMenu);
 </script>
 
-<div class="flex items-center gap-x-1">
+<div class="flex items-center gap-x-1 lg:hidden">
 	<div
 		class="flex cursor-pointer items-center justify-center rounded-lg border-[1.2px] border-gray-800/80 bg-zinc-900/10 p-1 shadow backdrop-blur-lg hover:border-gray-800/90 lg:hidden"
 	>
@@ -21,7 +21,7 @@
 	<button
 		aria-expanded={openMenu ? 'true' : 'false'}
 		aria-label="Menu button"
-		class="flex cursor-pointer items-center justify-center rounded-lg border-[1.2px] border-gray-800/80 bg-zinc-900/10 p-1 shadow backdrop-blur-lg hover:border-gray-800/90 lg:hidden"
+		class="flex cursor-pointer items-center justify-center rounded-lg border-[1.2px] border-gray-800/80 bg-zinc-900/10 p-1 shadow backdrop-blur-lg hover:border-gray-800/90"
 		onclick={menuButtonHandler}
 	>
 		<Icon icon="menu" size={38} />
@@ -30,7 +30,7 @@
 
 {#if openMenu}
 	<div
-		class="absolute top-17 right-0 z-30 w-fit rounded-lg border-[1.2px] border-gray-800/80 bg-zinc-900/10 px-8 py-9 shadow-md backdrop-blur-lg lg:hidden"
+		class="absolute top-17 right-0 z-30 w-fit rounded-lg border-[1.2px] border-gray-800/80 bg-zinc-900/10 px-8 py-9 shadow-md backdrop-blur-lg"
 		in:fade={{ easing: cubicOut }}
 		out:fade={{ duration: 200 }}
 	>
