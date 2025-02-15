@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	export let openMenu: boolean = false;
 
 	function navigateToBrandPath(event: MouseEvent) {
 		if (event.button === 2) {

@@ -21,6 +21,8 @@ export const navLinks: NavLinkObjType = [
 	}
 ];
 
+export const discordLink: string = 'https://discord.gg/SmBs7xGSWM';
+
 export type AnchorLinkTarget = '_self' | '_blank' | '_parent' | '_top';
 
 export type TailwindFontSizeClass =

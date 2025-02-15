@@ -6,11 +6,12 @@
 		icon: KnownIcon;
 		size: number;
 		className?: string | null;
+		fill?: string;
 	}
 
-	const { icon, size, className = '' }: IconPropsType = $props();
+	const { icon, size, className = '', fill = '#fff' }: IconPropsType = $props();
 </script>
 
 <span class={`site-icon ${className}`}>
-	<Icon width={size} height={size} icon={icons[icon]} />
+	<Icon width={size} height={size} icon={icons[icon]} {fill} />
 </span>
