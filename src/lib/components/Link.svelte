@@ -56,7 +56,7 @@
 {/if}
 
 <style lang="scss" scoped>
-	@reference "$lib/utils/app.css";
+	@reference "$lib/assets/app.css";
 
 	.link {
 		@apply text-slate-300;
@@ -64,7 +64,7 @@
 			@apply no-underline hover:underline;
 		}
 		&.navigation {
-			@apply text-base text-slate-300/90 transition-all duration-150 hover:text-slate-200/90;
+			@apply text-slate-300/90 transition-all duration-150 hover:text-slate-200/90;
 		}
 		&.footer {
 			@apply text-left text-base text-slate-300/90 transition-all duration-150 hover:text-slate-200/90;

@@ -4,6 +4,8 @@
 	import Icon from '../Icon.svelte';
 	import Dot from '../Dot.svelte';
 
+	import { discordLink } from '$lib';
+
 	type FooterLinkObjType = {
 		id: number;
 		label: string;
@@ -47,12 +49,7 @@
 					</p>
 				</div>
 				<div>
-					<a
-						href="https://discord.gg/SmBs7xGSWM"
-						target="_blank"
-						class="inline-block"
-						title="Discord"
-					>
+					<a href={discordLink} target="_blank" class="inline-block" title="Discord">
 						<Icon icon="discord" size={34} />
 					</a>
 				</div>
