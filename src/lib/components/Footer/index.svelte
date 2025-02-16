@@ -32,17 +32,15 @@
 				{#each footerLinks as footerLink (footerLink.id)}
 					<Link variant="footer" href={footerLink.href} label={footerLink.label} />
 				{/each}
-			</nav>
-			<div>
 				<a
 					href={discordLink}
 					target="_blank"
-					class="flex items-center gap-1.5 text-slate-300/90"
+					class="flex items-center gap-x-1.5 text-slate-300/90"
 					title="Discord"
 				>
 					<Icon icon="discord" size={28} /><span><p>Discord</p></span>
 				</a>
-			</div>
+			</nav>
 		</nav>
 		<h1
 			class="hidden bg-gradient-to-l from-red-500 via-orange-500 to-yellow-500 bg-clip-text text-right text-7xl font-bold text-transparent lg:inline-block"
