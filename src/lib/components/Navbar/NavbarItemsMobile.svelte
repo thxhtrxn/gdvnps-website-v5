@@ -4,6 +4,8 @@
 	import { navLinks, discordLink } from '$lib';
 	import Icon from '../Icon.svelte';
 	import Link from '../Link.svelte';
+	import Button from '../Button/Button.svelte';
+	import ButtonLink from '../Button/ButtonLink.svelte';
 
 	export let openMenu = false;
 
@@ -11,23 +13,25 @@
 </script>
 
 <div class="flex items-center gap-x-2.5 lg:hidden">
-	<div
-		class="flex cursor-pointer items-center justify-center rounded-lg border-2 border-gray-800/80 bg-zinc-900/20 px-1.5 py-1 shadow backdrop-blur-lg duration-150 hover:border-gray-800/90 hover:bg-zinc-900/40 lg:hidden"
+	<!-- Discord link button -->
+	<ButtonLink
+		variant="outline"
+		href={discordLink}
+		label="Discord"
+		className="flex items-center gap-1.5"
+		title="Discord"><Icon icon="discord" size={37} /><span><p>Discord</p></span></ButtonLink
 	>
-		<a href={discordLink} target="_blank" class="flex items-center gap-1.5" title="Discord">
-			<Icon icon="discord" size={37} /><span><p>Discord</p></span>
-		</a>
-	</div>
-	<button
+	<!-- Menu button -->
+	<Button
+		variant="outline"
 		aria-expanded={openMenu ? 'true' : 'false'}
 		aria-label="Menu button"
-		class={`flex cursor-pointer items-center justify-center rounded-lg border-2 border-gray-800/80 ${openMenu ? 'bg-zinc-900/75' : 'bg-zinc-900/20'} p-1 shadow backdrop-blur-lg duration-150 hover:border-gray-800/90 hover:bg-zinc-900/40`}
-		onclick={menuButtonHandler}
+		className={openMenu ? 'bg-zinc-900/75' : 'bg-zinc-900/20'}
+		onClickFn={menuButtonHandler}><Icon icon="menu" size={38} /></Button
 	>
-		<Icon icon="menu" size={38} />
-	</button>
 </div>
 
+<!-- Navbar Menu -->
 {#if openMenu}
 	<div
 		class="absolute top-17 right-0 z-30 block w-fit rounded-lg border-2 border-gray-800/80 bg-zinc-900/10 px-8 py-6 shadow-xl backdrop-blur-lg lg:hidden"
