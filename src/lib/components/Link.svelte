@@ -10,7 +10,7 @@
 		target?: AnchorLinkTarget;
 		className?: string;
 		onClickFn?: () => void;
-		fontSize?: TailwindFontSizeClass;
+		fontSize?: TailwindFontSizeClass | string;
 		variant?: AnchorLinkVariant;
 	}
 
@@ -23,51 +23,27 @@
 		fontSize = 'text-base',
 		variant = 'default'
 	}: LinkPropsType = $props();
+
+	const linkVariantClasses = {
+		default: clsx('no-underline hover:underline', fontSize),
+		navigation: clsx(
+			'text-slate-300/90 transition-all duration-150 hover:text-slate-200/90',
+			fontSize
+		),
+		footer: clsx(
+			'text-left text-base text-slate-300/90 transition-all duration-150 hover:text-slate-200/90',
+			fontSize
+		)
+	};
+
+	const linkClasses = clsx('text-slate-300', linkVariantClasses[variant], className);
 </script>
 
-{#if variant === 'navigation'}
-	<a
-		href={`${href}`}
-		onclick={onClickFn}
-		class={clsx('link', fontSize, {
-			navigation: variant === 'navigation'
-		})}>{label}</a
-	>
-{:else if variant === 'footer'}
-	<a
-		href={`${href}`}
-		class={clsx('link', {
-			footer: variant === 'footer'
-		})}>{label}</a
-	>
-{:else}
-	<a
-		href={`${href}`}
-		target={`${target}`}
-		class={clsx(
-			'link',
-			fontSize,
-			{
-				default: variant === 'default'
-			},
-			className
-		)}>{label}</a
-	>
-{/if}
-
-<style lang="scss" scoped>
-	@reference "$lib/assets/app.css";
-
-	.link {
-		@apply text-slate-300;
-		&.default {
-			@apply no-underline hover:underline;
-		}
-		&.navigation {
-			@apply text-slate-300/90 transition-all duration-150 hover:text-slate-200/90;
-		}
-		&.footer {
-			@apply text-left text-base text-slate-300/90 transition-all duration-150 hover:text-slate-200/90;
-		}
-	}
-</style>
+<a
+	{href}
+	target={variant === 'default' ? target : undefined}
+	onclick={onClickFn}
+	class={linkClasses}
+>
+	{label}
+</a>
