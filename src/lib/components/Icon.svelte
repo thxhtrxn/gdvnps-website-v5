@@ -9,7 +9,7 @@
 		fill?: string;
 	}
 
-	const { icon, size, className = '', fill = '#fff' }: IconPropsType = $props();
+	const { icon, size, className = '', fill = '#dđd' }: IconPropsType = $props();
 </script>
 
 <span class={`site-icon ${className}`}>

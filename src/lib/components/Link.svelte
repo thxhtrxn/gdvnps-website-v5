@@ -14,7 +14,7 @@
 		variant?: AnchorLinkVariant;
 	}
 
-	const {
+	let {
 		href,
 		label,
 		target = '_self',
