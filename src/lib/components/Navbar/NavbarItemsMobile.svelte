@@ -4,6 +4,7 @@
 	import { navLinks, discordLink } from '$lib';
 	import Icon from '../Icon.svelte';
 	import Link from '../Link.svelte';
+	import ButtonRow from '../Button/ButtonRow.svelte';
 	import Button from '../Button/Button.svelte';
 	import ButtonLink from '../Button/ButtonLink.svelte';
 
@@ -12,13 +13,13 @@
 	const menuButtonHandler = () => (openMenu = !openMenu);
 </script>
 
-<div class="flex items-center gap-x-2.5 lg:hidden">
+<ButtonRow className="lg:hidden">
 	<!-- Discord link button -->
 	<ButtonLink
 		variant="outline"
 		href={discordLink}
 		label="Discord"
-		className="flex items-center gap-1.5"
+		className="flex items-center gap-1.5 px-2 py-1"
 		title="Discord"><Icon icon="discord" size={37} /><span><p>Discord</p></span></ButtonLink
 	>
 	<!-- Menu button -->
@@ -26,15 +27,15 @@
 		variant="outline"
 		aria-expanded={openMenu ? 'true' : 'false'}
 		aria-label="Menu button"
-		className={openMenu ? 'bg-zinc-900/75' : 'bg-zinc-900/20'}
+		className={`p-1 ${openMenu ? 'bg-zinc-900/75' : 'bg-zinc-900/20'}`}
 		onClickFn={menuButtonHandler}><Icon icon="menu" size={38} /></Button
 	>
-</div>
+</ButtonRow>
 
 <!-- Navbar Menu -->
 {#if openMenu}
 	<div
-		class="absolute top-17 right-0 z-30 block w-fit rounded-lg border-2 border-gray-800/80 bg-zinc-900/10 px-8 py-6 shadow-xl backdrop-blur-lg lg:hidden"
+		class="absolute top-17 right-0 z-30 block w-fit rounded-xl border-2 border-gray-800/80 bg-zinc-900/10 px-8 py-6 shadow-xl backdrop-blur-lg lg:hidden"
 		in:blur={{ delay: 10, opacity: 100, easing: cubicOut, duration: 400 }}
 		out:blur={{ delay: 20, opacity: 0, easing: backOut, duration: 470 }}
 	>

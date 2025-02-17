@@ -27,7 +27,7 @@
 	const buttonVariantClasses = {
 		fill: clsx('no-underline hover:underline bg-red-500', fontSize, className),
 		outline: clsx(
-			'flex cursor-pointer items-center justify-center rounded-lg border-2 border-gray-800/80 p-1 shadow backdrop-blur-lg duration-150 hover:border-gray-800/90 hover:bg-zinc-900/53',
+			'flex cursor-pointer items-center justify-center rounded-xl border-2 border-gray-800/80 p-1 shadow backdrop-blur-lg duration-150 hover:border-gray-800/90 hover:bg-zinc-900/53',
 			fontSize,
 			className
 		)
