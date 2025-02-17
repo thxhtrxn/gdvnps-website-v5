@@ -35,7 +35,7 @@
 				<a
 					href={discordLink}
 					target="_blank"
-					class="flex items-center gap-x-1.5 text-slate-300/90"
+					class="flex items-center gap-x-1.5 text-left text-base text-slate-300/90 transition-all duration-150 hover:text-slate-200/90"
 					title="Discord"
 				>
 					<Icon icon="discord" size={28} /><span><p>Discord</p></span>
@@ -53,7 +53,13 @@
 		<div class="py-8">
 			<div class="flex items-center justify-between gap-6 py-3">
 				<div class="flex items-center gap-4">
-					<img src="/gdvnps-logo-no-bg.svg" alt="GDVNPS's logo" width={38} height={38} />
+					<img
+						src="/gdvnps-logo-no-bg.svg"
+						alt="GDVNPS's logo"
+						width={38}
+						height={38}
+						class="pointer-events-none"
+					/>
 					<p class="copyright flex items-center text-base text-slate-300/90">
 						Copyright <Icon icon="copyright" size={17} className="mx-1" /> GDVNPS 2024-present
 					</p>
