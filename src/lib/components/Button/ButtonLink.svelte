@@ -24,7 +24,7 @@
 
 	const buttonLinkVariantClasses = {
 		fill: clsx(
-			'flex cursor-pointer items-center justify-center rounded-xl text-slate-200 bg-orange-600/95 border-2 border-orange-500 shadow backdrop-blur-lg duration-150 hover:border-gray-800/90 hover:bg-orange-700/40',
+			'flex cursor-pointer items-center justify-center rounded-xl text-slate-200 bg-orange-600/95 border-2 border-orange-500 shadow backdrop-blur-lg duration-150 hover:border-gray-800/90 hover:bg-orange-600/40',
 			fontSize,
 			className
 		),

@@ -15,13 +15,13 @@
 ></div>
 <main class="w-full max-w-[1380px]">
 	<section
-		class="mx-auto mt-16 flex w-full flex-col items-center justify-center gap-5 px-4 sm:max-w-screen-md sm:px-8 md:mt-20 md:gap-6 lg:mt-24 lg:gap-7"
+		class="mx-auto mt-14 flex w-full flex-col items-center justify-center gap-5 px-4 sm:max-w-screen-md sm:px-8 md:mt-16 md:gap-6 lg:mt-20 lg:gap-7"
 	>
 		<!-- hero text -->
 		<h1
 			class="text-center font-(family-name:--font-be-vn-pro) text-4xl/[1.2] font-extrabold lg:text-5xl/[1.2]"
 		>
-			<span class="text-slate-300">GDPS Bởi</span>
+			<span class="text-slate-300">GDPS bởi</span>
 			<span
 				class="bg-gradient-to-tr from-red-500/95 via-orange-500 to-yellow-500 bg-clip-text text-transparent"
 				>người Việt</span
@@ -48,13 +48,13 @@
 			<ButtonLink
 				variant="fill"
 				href="/download"
-				className="text-slate-200 inline-block px-4 py-3.5 transition-all duration-300"
-				><strong>Tải xuống</strong></ButtonLink
+				className="text-slate-200 inline-block px-4 py-3 transition-all duration-300"
+				>Tải xuống</ButtonLink
 			>
 			<ButtonLink
 				variant="outline"
 				href="https://gdvnps.ps.fhgdps.com/dashboard"
-				className="text-slate-200 inline-block px-4 py-3.5 transition-all duration-300"
+				className="text-slate-200 inline-block px-4 py-3 transition-all duration-300"
 				>Dashboard</ButtonLink
 			>
 		</ButtonRow>
