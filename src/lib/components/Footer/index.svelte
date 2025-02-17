@@ -30,7 +30,7 @@
 				class="grid grid-cols-2 flex-wrap items-center justify-center gap-x-16 gap-y-9 lg:grid lg:grid-cols-3 lg:gap-x-24 lg:gap-y-12"
 			>
 				{#each footerLinks as footerLink (footerLink.id)}
-					<Link variant="footer" href={footerLink.href} label={footerLink.label} />
+					<Link variant="footer" href={footerLink.href}>{footerLink.label}</Link>
 				{/each}
 				<a
 					href={discordLink}

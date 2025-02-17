@@ -45,10 +45,11 @@
 					<Link
 						fontSize="text-[1.17rem]"
 						href={navLink.href}
-						label={navLink.label}
 						variant="navigation"
 						onClickFn={menuButtonHandler}
-					/>
+					>
+						{navLink.label}
+					</Link>
 				</li>
 			{/each}
 		</ul>

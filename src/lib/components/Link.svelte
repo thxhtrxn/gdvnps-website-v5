@@ -6,7 +6,7 @@
 
 	interface LinkPropsType {
 		href: string | undefined;
-		label: string | null;
+		children: any;
 		target?: AnchorLinkTarget;
 		className?: string;
 		onClickFn?: () => void;
@@ -16,7 +16,7 @@
 
 	let {
 		href,
-		label,
+		children,
 		target = '_self',
 		className,
 		onClickFn,
@@ -45,5 +45,5 @@
 	onclick={onClickFn}
 	class={linkClasses}
 >
-	{label}
+	{@render children()}
 </a>
