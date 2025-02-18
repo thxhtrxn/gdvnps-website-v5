@@ -7,6 +7,9 @@
 	import Icon from '$lib/components/Icon.svelte';
 	import Dot from '$lib/components/Dot.svelte';
 	import GDVNPSBanner from '$lib/assets/gdvnps-banner.webp';
+	import LVLGPSS1 from '$lib/assets/lvl-gp-ss-1.avif';
+	import LVLGPSS2 from '$lib/assets/lvl-gp-ss-2.avif';
+	import LVLGPSS3 from '$lib/assets/lvl-gp-ss-3.avif';
 </script>
 
 <MetaBuilder
@@ -15,9 +18,9 @@
 />
 
 {#snippet infoLink(href: string, icon: KnownIcon, label: string)}
-	<Link {href} variant="navigation">
+	<Link {href} variant="navigation" fontSize="text-xs lg:text-base">
 		<div class="flex items-center gap-x-(--info-link-gap)">
-			<Icon {icon} size={28} /><span>{label}</span>
+			<Icon {icon} size={24} /><span>{label}</span>
 		</div></Link
 	>
 {/snippet}
@@ -53,12 +56,12 @@
 			style="word-wrap:break-word"
 			class="text-center text-base leading-[1.8] font-normal tracking-wide text-slate-300/90 lg:text-lg"
 		>
-			Được lập ra vào 2024, GDVNPS là <strong
-				><a href="/faq#gdps-la-gi" class="hover:underline">máy chủ GDPS</a></strong
-			>
+			Được lập ra vào 2024, GDVNPS là <strong>máy chủ GDPS</strong>
 			dành cho
 			<strong
-				>cộng đồng người chơi Geometry Dash <span class="text-orange-400">tại Việt Nam</span
+				>cộng đồng người chơi Geometry Dash <span
+					class="bg-gradient-to-tl from-orange-500 to-yellow-500 bg-clip-text text-transparent"
+					>tại Việt Nam</span
 				></strong
 			>
 		</p>
@@ -97,11 +100,38 @@
 				<Dot />
 				{@render infoLink('https://gdvnps.ps.fhgdps.com/dashboard', 'dashboard', 'Dashboard')}
 			</div>
-			<div class="mt-3.5 flex flex-row items-center justify-center gap-(--info-gap)">
-				{@render infoLink('https://gdvnps.ps.fhgdps.com/browser', 'browser', 'Browser')}
-				<Dot />
-				{@render infoLink('/faq', 'ask', 'FAQ')}
-			</div>
 		</div>
 	</div>
+	<section class="flex flex-col items-center gap-16 pt-20 lg:flex-row">
+		<div class="m-0 text-slate-300/90">
+			<p class="font-main/[1.25]">
+				GDVNPS là <strong
+					class="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent"
+					>máy chủ Geometry Dash Private Server (GDPS)</strong
+				>
+				dành cho <strong>người Việt</strong>. Với tiêu chí đặt
+				<strong class="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent"
+					>trải nghiệm và chất lượng lên hàng đầu</strong
+				>. GDVNPS còn hỗ trợ trên các nền tảng phổ biến như
+				<strong
+					class="bg-gradient-to-bl from-orange-500 to-yellow-500 bg-clip-text text-transparent"
+					>Windows</strong
+				>,
+				<strong
+					class="bg-gradient-to-tr from-orange-500 to-yellow-500 bg-clip-text text-transparent"
+					>Android</strong
+				>
+				và
+				<strong
+					class="bg-gradient-to-br from-orange-500 to-yellow-500 bg-clip-text text-transparent"
+					>iOS</strong
+				>, kèm với đó là khả năng tương thích với
+				<strong
+					class="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent hover:text-orange-400 hover:underline"
+					><a href="https://geode-sdk.org/">Geode</a></strong
+				> tốt.
+			</p>
+		</div>
+		<div class="w-full"></div>
+	</section>
 </main>
