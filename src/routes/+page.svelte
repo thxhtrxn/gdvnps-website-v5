@@ -93,11 +93,14 @@
 			<div class="flex flex-row items-center justify-center gap-(--info-gap)">
 				{@render infoLink('https://discord.gg/SmBs7xGSWM', 'discord', 'Discord')}
 				<Dot />
+				{@render infoLink('/download', 'download', 'Tải xuống')}
+				<Dot />
 				{@render infoLink('https://gdvnps.ps.fhgdps.com/dashboard', 'dashboard', 'Dashboard')}
+			</div>
+			<div class="mt-3.5 flex flex-row items-center justify-center gap-(--info-gap)">
+				{@render infoLink('https://gdvnps.ps.fhgdps.com/browser', 'browser', 'Browser')}
 				<Dot />
 				{@render infoLink('/faq', 'ask', 'FAQ')}
-				<Dot />
-				{@render infoLink('/browser', 'browser', 'Browser')}
 			</div>
 		</div>
 	</div>

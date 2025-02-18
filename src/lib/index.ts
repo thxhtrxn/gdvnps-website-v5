@@ -5,7 +5,8 @@ export const icons = {
 	dashboard: 'ri:dashboard-fill',
 	ask: 'ri:question-fill',
 	browser: 'pepicons-pencil:internet',
-	github: 'mdi:github'
+	github: 'mdi:github',
+	download: 'material-symbols:download'
 };
 export type KnownIcon = keyof typeof icons;
 
@@ -17,7 +18,7 @@ type NavLinkObjType = {
 export const navLinks: NavLinkObjType = [
 	{ id: 1, label: 'Tải xuống', href: '/download' },
 	{ id: 2, label: 'FAQ', href: '/faq' },
-	{ id: 3, label: 'Browser', href: '#browser' },
+	{ id: 3, label: 'Browser', href: 'https://gdvnps.ps.fhgdps.com/browser/' },
 	{
 		id: 4,
 		label: 'Dashboard',
