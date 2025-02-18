@@ -1,7 +1,11 @@
 export const icons = {
 	discord: 'ic:round-discord',
 	copyright: 'lucide:copyright',
-	menu: 'mdi-light:menu'
+	menu: 'mdi-light:menu',
+	dashboard: 'ri:dashboard-fill',
+	ask: 'ri:question-fill',
+	browser: 'pepicons-pencil:internet',
+	github: 'mdi:github'
 };
 export type KnownIcon = keyof typeof icons;
 

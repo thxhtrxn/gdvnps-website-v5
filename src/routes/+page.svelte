@@ -1,9 +1,11 @@
 <script lang="ts">
+	import type { KnownIcon } from '$lib';
 	import MetaBuilder from '$lib/utils/MetaBuilder.svelte';
 	import ButtonRow from '$lib/components/Button/ButtonRow.svelte';
 	import ButtonLink from '$lib/components/Button/ButtonLink.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import Icon from '$lib/components/Icon.svelte';
+	import Dot from '$lib/components/Dot.svelte';
 	import GDVNPSBanner from '$lib/assets/gdvnps-banner.webp';
 </script>
 
@@ -12,16 +14,24 @@
 	desc="GDVNPS là một dự án Geometry Dash Private Server (GDPS) dành cho cộng đồng người chơi Geometry Dash tại Việt Nam"
 />
 
+{#snippet infoLink(href: string, icon: KnownIcon, label: string)}
+	<Link {href} variant="navigation">
+		<div class="flex items-center gap-x-(--info-link-gap)">
+			<Icon {icon} size={28} /><span>{label}</span>
+		</div></Link
+	>
+{/snippet}
+
 <div
 	aria-hidden="true"
 	class="pointer-events-none absolute top-0 right-0 left-0 -z-50 [margin-inline:auto] h-36 w-full max-w-[1200px] bg-gradient-to-b from-orange-400/40 to-orange-400/15 blur-[14rem] lg:blur-[15rem] xl:blur-[17rem]"
 ></div>
 <main
 	class="flex w-full max-w-[1400px] flex-col justify-center gap-y-(--hero-header-gap-y)"
-	style="--hero-header-gap-y:3.82rem;--info-gap:1rem;--info-link-gap:0.5rem"
+	style="--hero-header-gap-y:3rem;--info-gap:1rem;--info-link-gap:0.5rem"
 >
 	<section
-		class="mx-auto mt-14 flex w-full flex-col items-center justify-center gap-5 px-3.5 sm:max-w-screen-md sm:px-7 md:mt-16 md:gap-6 lg:mt-20 lg:gap-7"
+		class="mx-auto mt-14 mb-1 flex w-full flex-col items-center justify-center gap-5 px-3.5 sm:max-w-screen-md sm:px-7 md:mt-16 md:gap-6 lg:mt-20 lg:gap-7"
 	>
 		<!-- hero text -->
 		<h1
@@ -75,17 +85,19 @@
 			alt="GDVNPS Banner"
 			width={1280 - 500}
 			height={720 - 500}
-			class="pointer-events-none rounded-xl"
+			class="pointer-events-none rounded-xl border border-slate-600 select-none"
 		/>
 	</div>
 	<div class="flex w-full flex-col items-center justify-center gap-y-(--info-gap)">
-		<div style="--info-link-col">
+		<div>
 			<div class="flex flex-row items-center justify-center gap-(--info-gap)">
-				<Link href="https://discord.gg/SmBs7xGSWM" target="_blank">
-					<div class="flex items-center gap-x-(--info-link-gap)">
-						<Icon icon="discord" size={28} /><span>Discord</span>
-					</div></Link
-				>
+				{@render infoLink('https://discord.gg/SmBs7xGSWM', 'discord', 'Discord')}
+				<Dot />
+				{@render infoLink('https://gdvnps.ps.fhgdps.com/dashboard', 'dashboard', 'Dashboard')}
+				<Dot />
+				{@render infoLink('/faq', 'ask', 'FAQ')}
+				<Dot />
+				{@render infoLink('/browser', 'browser', 'Browser')}
 			</div>
 		</div>
 	</div>
