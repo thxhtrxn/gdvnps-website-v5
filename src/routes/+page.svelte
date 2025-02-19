@@ -5,11 +5,14 @@
 	import ButtonLink from '$lib/components/Button/ButtonLink.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import Icon from '$lib/components/Icon.svelte';
+	import Image from '$lib/components/Image.svelte';
 	import Dot from '$lib/components/Dot.svelte';
+
 	import GDVNPSBanner from '$lib/assets/gdvnps-banner.webp';
-	import LVLGPSS1 from '$lib/assets/lvl-gp-ss-1.avif';
-	import LVLGPSS2 from '$lib/assets/lvl-gp-ss-2.avif';
-	import LVLGPSS3 from '$lib/assets/lvl-gp-ss-3.avif';
+
+	import LVLGDSS1Webp from '$lib/assets/screenshot/lvl-gp-ss-1.webp';
+	import LVLGDSS2Webp from '$lib/assets/screenshot/lvl-gp-ss-2.webp';
+	import LVLGDSS3Webp from '$lib/assets/screenshot/lvl-gp-ss-3.webp';
 </script>
 
 <MetaBuilder
@@ -82,13 +85,13 @@
 		</ButtonRow>
 	</section>
 	<div class="flex justify-center">
-		<img
+		<Image
 			loading="eager"
 			src={GDVNPSBanner}
 			alt="GDVNPS Banner"
 			width={1280 - 500}
 			height={720 - 500}
-			class="pointer-events-none rounded-xl border border-slate-600 select-none"
+			className=" border border-slate-600 select-none"
 		/>
 	</div>
 	<div class="flex w-full flex-col items-center justify-center gap-y-(--info-gap)">
@@ -102,7 +105,7 @@
 			</div>
 		</div>
 	</div>
-	<section class="flex flex-col items-center gap-16 pt-20 lg:flex-row">
+	<section class="flex flex-col items-center gap-16 pt-20 lg:mx-48 lg:flex-row">
 		<div class="m-0 text-slate-300/90">
 			<p class="font-main/[1.25]">
 				GDVNPS là <strong
@@ -132,6 +135,15 @@
 				> tốt.
 			</p>
 		</div>
-		<div class="w-full"></div>
+		<div class="grid w-full grid-cols-2 gap-2.5">
+			<Image
+				className="flex [grid-column-start:1] [grid-column-end:3]"
+				src={LVLGDSS1Webp}
+				alt="Screenshot Gameplay 1"
+				loading="lazy"
+			/>
+			<Image src={LVLGDSS2Webp} alt="Screenshot Gameplay 2" loading="lazy" />
+			<Image src={LVLGDSS3Webp} alt="Screenshot Gameplay 3" loading="lazy" />
+		</div>
 	</section>
 </main>
