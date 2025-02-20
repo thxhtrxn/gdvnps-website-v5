@@ -8,11 +8,10 @@
 	import Image from '$lib/components/Image.svelte';
 	import Dot from '$lib/components/Dot.svelte';
 
-	import GDVNPSBanner from '$lib/assets/gdvnps-banner.webp';
+	import BlurLightFilter from '$lib/components/BlurLightFilter.svelte';
+	import ShowcaseContentImg from '$lib/components/ShowcaseContentImg.svelte';
 
-	import LVLGDSS1Webp from '$lib/assets/screenshot/lvl-gp-ss-1.webp';
-	import LVLGDSS2Webp from '$lib/assets/screenshot/lvl-gp-ss-2.webp';
-	import LVLGDSS3Webp from '$lib/assets/screenshot/lvl-gp-ss-3.webp';
+	import GDVNPSBanner from '$lib/assets/gdvnps-banner.webp';
 </script>
 
 <MetaBuilder
@@ -28,10 +27,7 @@
 	>
 {/snippet}
 
-<div
-	aria-hidden="true"
-	class="pointer-events-none absolute top-0 right-0 left-0 -z-50 [margin-inline:auto] h-36 w-full max-w-[1200px] bg-gradient-to-b from-orange-400/40 to-orange-400/15 blur-[14rem] lg:blur-[15rem] xl:blur-[17rem]"
-></div>
+<BlurLightFilter />
 <main
 	class="flex w-full max-w-[1400px] flex-col justify-center gap-y-(--hero-header-gap-y)"
 	style="--hero-header-gap-y:3rem;--info-gap:1rem;--info-link-gap:0.5rem"
@@ -91,7 +87,7 @@
 			alt="GDVNPS Banner"
 			width={1280 - 500}
 			height={720 - 500}
-			className=" border border-slate-600 select-none"
+			className="pointer-events-none border border-slate-600 select-none"
 		/>
 	</div>
 	<div class="flex w-full flex-col items-center justify-center gap-y-(--info-gap)">
@@ -105,7 +101,7 @@
 			</div>
 		</div>
 	</div>
-	<section class="flex flex-col items-center gap-16 pt-20 lg:mx-48 lg:flex-row">
+	<section class="grid grid-cols-1 items-center justify-items-center lg:mx-10 lg:grid-cols-2">
 		<div class="m-0 text-slate-300/90">
 			<p class="font-main/[1.25]">
 				GDVNPS là <strong
@@ -135,15 +131,6 @@
 				> tốt.
 			</p>
 		</div>
-		<div class="grid w-full grid-cols-2 gap-2.5">
-			<Image
-				className="flex [grid-column-start:1] [grid-column-end:3]"
-				src={LVLGDSS1Webp}
-				alt="Screenshot Gameplay 1"
-				loading="lazy"
-			/>
-			<Image src={LVLGDSS2Webp} alt="Screenshot Gameplay 2" loading="lazy" />
-			<Image src={LVLGDSS3Webp} alt="Screenshot Gameplay 3" loading="lazy" />
-		</div>
+		<ShowcaseContentImg />
 	</section>
 </main>

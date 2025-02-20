@@ -12,12 +12,4 @@
 	const { src, alt, width, height, loading = 'eager', className, style }: ImagePropsType = $props();
 </script>
 
-<img
-	{src}
-	{alt}
-	{width}
-	{height}
-	{loading}
-	{style}
-	class={`pointer-events-none rounded-xl ${className}`}
-/>
+<img {src} {alt} {width} {height} {loading} {style} class={`rounded-xl ${className}`} />
