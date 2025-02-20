@@ -49,3 +49,6 @@
 		bạn chấp nhận bất kỳ điều khoản đã sửa đổi nào.
 	</li>
 </div>
+<div class="pt-16 text-center text-sm font-thin">
+	<p>Cập nhật lần cuối 19/2/2025 (dd/mm/yyyy)</p>
+</div>
