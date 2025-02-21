@@ -18,7 +18,7 @@
 		href,
 		children,
 		target = '_self',
-		className,
+		className = '',
 		onClickFn,
 		fontSize = 'text-base',
 		variant = 'default'

@@ -9,7 +9,15 @@
 		style?: string;
 	}
 
-	const { src, alt, width, height, loading = 'eager', className, style }: ImagePropsType = $props();
+	const {
+		src,
+		alt,
+		width,
+		height,
+		loading = 'eager',
+		className = '',
+		style
+	}: ImagePropsType = $props();
 </script>
 
 <img {src} {alt} {width} {height} {loading} {style} class={`rounded-xl ${className}`} />

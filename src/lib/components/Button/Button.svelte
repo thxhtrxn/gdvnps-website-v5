@@ -16,7 +16,7 @@
 
 	let {
 		label,
-		className,
+		className = '',
 		onClickFn,
 		fontSize,
 		variant = 'fill',

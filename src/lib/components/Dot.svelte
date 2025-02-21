@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { className }: { className?: string } = $props();
+	let { className = '' }: { className?: string } = $props();
 </script>
 
 <div

@@ -3,10 +3,11 @@ export const icons = {
 	copyright: 'lucide:copyright',
 	menu: 'mdi-light:menu',
 	dashboard: 'ri:dashboard-fill',
-	ask: 'ri:question-fill',
-	browser: 'pepicons-pencil:internet',
 	github: 'mdi:github',
-	download: 'material-symbols:download'
+	download: 'material-symbols:download',
+	windows: 'ri:windows-fill',
+	android: 'material-symbols:android',
+	ios: 'ic:baseline-apple'
 };
 export type KnownIcon = keyof typeof icons;
 

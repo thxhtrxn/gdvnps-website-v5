@@ -15,7 +15,7 @@
 
 	let {
 		href,
-		className,
+		className = '',
 		fontSize,
 		variant = 'fill',
 		children,
