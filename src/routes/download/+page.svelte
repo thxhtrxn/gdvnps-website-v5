@@ -20,10 +20,10 @@
 
 	onMount(async () => {
 		try {
-			// const res = await fetch('https://api.github.com/repos/TacoEnjoyer/gdvnps/releases/latest');
-			const res = await fetch('https://api.github.com/repos/TacoEnjoyer/gdvnps/releases/194288434');
+			const res = await fetch('https://api.github.com/repos/TacoEnjoyer/gdvnps/releases/latest');
+			// const res = await fetch('https://api.github.com/repos/TacoEnjoyer/gdvnps/releases/194288434');
 			release = await res.json();
-			console.log(release);
+			// console.log(release);
 		} catch (error) {
 			console.error('Error fetching release data:', error);
 		}

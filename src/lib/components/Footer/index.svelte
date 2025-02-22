@@ -16,9 +16,9 @@
 		{ id: 1, label: 'Tải xuống', href: '/download' },
 		{ id: 2, label: 'FAQ', href: '/faq' },
 		{ id: 3, label: 'Browser', href: 'https://gdvnps.ps.fhgdps.com/browser' },
-		{ id: 4, label: 'Dashboard', href: 'https://gdvnps.ps.fhgdps.com/dashboard' },
-		{ id: 5, label: 'Brand', href: '/brand' },
-		{ id: 6, label: 'Credit', href: '/credit' }
+		{ id: 4, label: 'Dashboard', href: 'https://gdvnps.ps.fhgdps.com/dashboard' }
+		// { id: 5, label: 'Brand', href: '/brand' },
+		// { id: 6, label: 'Credit', href: '/credit' }
 	];
 </script>
 
@@ -38,7 +38,7 @@
 					class="flex items-center gap-x-1.5 text-left text-base text-slate-300/90 transition-all duration-150 hover:text-slate-200/90"
 					title="Discord"
 				>
-					<Icon icon="discord" size={28} /><span><p>Discord</p></span>
+					<!-- <Icon icon="discord" size={28} /> --><span><p>Discord</p></span>
 				</a>
 			</nav>
 		</nav>
