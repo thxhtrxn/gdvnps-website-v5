@@ -6,3 +6,25 @@
 		font-family: 'Inter', sans-serif;
 	}
 }
+
+.markdown-faq > h3 {
+	@apply mb-1 text-xl font-semibold text-orange-400;
+}
+
+.markdown-faq > p {
+	@apply mb-3.5 text-slate-300;
+}
+
+.markdown-faq a {
+	@apply text-red-300 transition-all duration-150 hover:text-white hover:underline;
+}
+
+.markdown-faq strong {
+	@apply text-red-400;
+}
+
+.markdown-faq li {
+	list-style: circle;
+	list-style-position: inside;
+	@apply mb-3 text-slate-300;
+}

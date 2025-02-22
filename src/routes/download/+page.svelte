@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import PageLayout from '$lib/layout/PageLayout.svelte';
+	import PageLayout from '$lib/layouts/PageLayout.svelte';
 	import MetaBuilder from '$lib/utils/MetaBuilder.svelte';
 
 	import BlurLightFilter from '$lib/components/BlurLightFilter.svelte';

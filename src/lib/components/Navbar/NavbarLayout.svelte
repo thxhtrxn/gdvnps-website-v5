@@ -50,8 +50,5 @@
 				@apply pointer-events-none select-none;
 			}
 		}
-		// &__menu-btn {
-		// 	@apply block lg:hidden;
-		// }
 	}
 </style>

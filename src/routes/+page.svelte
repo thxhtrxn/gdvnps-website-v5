@@ -1,5 +1,5 @@
 <script lang="ts">
-	import PageLayout from '$lib/layout/PageLayout.svelte';
+	import PageLayout from '$lib/layouts/PageLayout.svelte';
 	import type { KnownIcon } from '$lib';
 	import MetaBuilder from '$lib/utils/MetaBuilder.svelte';
 	import Link from '$lib/components/Link.svelte';
