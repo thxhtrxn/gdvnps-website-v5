@@ -1,11 +1,12 @@
 <script lang="ts">
-	import Image from './Image.svelte';
+	import Image from '../Image.svelte';
 
 	import LVLGDSS1Webp from '$lib/assets/screenshot/lvl-gp-ss-1.webp';
 	import LVLGDSS2Webp from '$lib/assets/screenshot/lvl-gp-ss-2.webp';
+	import LVLGDSS3Webp from '$lib/assets/screenshot/lvl-gp-ss-3.webp';
 </script>
 
-<div class="mt-2.5 lg:mt-0">
+<div class="img-parent mt-2.5 hidden lg:mt-0 lg:flex">
 	<Image
 		className="shadow"
 		src={LVLGDSS1Webp}
@@ -21,12 +22,14 @@
 		loading="eager"
 	/>
 </div>
+<div class="block lg:hidden">
+	<Image className="shadow" src={LVLGDSS3Webp} alt="Showcase Image" loading="eager" />
+</div>
 
 <style lang="scss" scoped>
-	div {
+	div.img-parent {
 		padding: 0.65rem;
 		height: 20rem;
-		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;

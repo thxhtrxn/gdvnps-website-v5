@@ -36,7 +36,10 @@
 	};
 </script>
 
-<MetaBuilder title="Tải xuống GDVNPS" desc="Tải xuống GDVNPS cho các nền tảng" />
+<MetaBuilder
+	title="Tải Xuống GDVNPS"
+	desc="Tải xuống GDVNPS cho Windows, Android, iOS và Geode cho GDVNPS Android"
+/>
 
 <BlurLightFilter />
 <PageLayout>

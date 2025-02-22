@@ -1,6 +1,6 @@
 <script lang="ts">
-	import ButtonRow from '$lib/components/Button/ButtonRow.svelte';
-	import ButtonLink from '$lib/components/Button/ButtonLink.svelte';
+	import ButtonRow from '../Button/ButtonRow.svelte';
+	import ButtonLink from '../Button/ButtonLink.svelte';
 </script>
 
 <section

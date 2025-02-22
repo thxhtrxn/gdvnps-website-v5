@@ -8,8 +8,8 @@
 	import Dot from '$lib/components/Dot.svelte';
 
 	import BlurLightFilter from '$lib/components/BlurLightFilter.svelte';
-	import HeroHeader from '$lib/components/HeroHeader.svelte';
-	import ShowcaseContentImg from '$lib/components/ShowcaseContentImg.svelte';
+	import HeroHeader from '$lib/components/HomePageComponents/HeroHeader.svelte';
+	import ShowcaseContentImg from '$lib/components/HomePageComponents/ShowcaseContentImg.svelte';
 
 	import GDVNPSBanner from '$lib/assets/gdvnps-banner.webp';
 </script>
