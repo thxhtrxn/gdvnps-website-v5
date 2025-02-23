@@ -1,2 +1,4 @@
-User-agent: *
+User-agent: Baiduspider
 Disallow: /
+
+Sitemap: https://gdvnps.site/sitemap.xml
