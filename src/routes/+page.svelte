@@ -97,7 +97,7 @@
 				<ButtonLink
 					href="/faq#he-thong-rating"
 					className="text-slate-200 inline-block px-4 py-3 transition-all duration-300 mt-3.5"
-					>Tiêu chuẩn reting level</ButtonLink
+					>Tiêu chuẩn rating level</ButtonLink
 				>
 			</div>
 		</div>
