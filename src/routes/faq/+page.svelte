@@ -1,11 +1,19 @@
 <script lang="ts">
-	import { marked } from 'marked';
-	import { info, ingame } from '$lib/contents';
+	import SvelteMarkdown from 'svelte-markdown';
 	import MetaBuilder from '$lib/utils/MetaBuilder.svelte';
 	import PageLayout from '$lib/layouts/PageLayout.svelte';
 
 	import BlurLightFilter from '$lib/components/BlurLightFilter.svelte';
-	import FaqContentLayout from '$lib/layouts/FAQContentLayout.svelte';
+	// import FaqContentLayout from '$lib/layouts/FAQContentLayout.svelte';
+
+	import faqs from '$lib/data/faqs.json';
+
+	function anchorIDForTitle(title: string): string {
+		return title
+			.replace(/[^\w\s]/g, '')
+			.replace(/\s+/g, '-')
+			.toLowerCase();
+	}
 </script>
 
 <MetaBuilder
@@ -14,7 +22,11 @@
 />
 
 {#snippet headerFAQSectionText(text: string)}
-	<h2 class="mt-5 text-left text-2xl font-semibold text-yellow-300">{text}</h2>
+	<h2
+		class="mt-5 bg-gradient-to-tr from-orange-400 to-yellow-400 bg-clip-text text-left text-2xl font-bold text-transparent"
+	>
+		{text}
+	</h2>
 {/snippet}
 
 <BlurLightFilter />
@@ -34,18 +46,34 @@
 	</section>
 	<section class="flex items-center justify-center">
 		<div class="flex w-full max-w-2xl flex-col flex-nowrap items-stretch gap-4">
-			{@render headerFAQSectionText('Về GDVNPS')}
-			{#each info as infoIndex}
-				<FaqContentLayout id={`#${infoIndex.idHash}`}>
-					{@html marked(infoIndex.content)}
-				</FaqContentLayout>
-			{/each}
-			{@render headerFAQSectionText('Thông tin trong GDVNPS')}
-			{#each ingame as ingameIndex}
-				<FaqContentLayout id={`#${ingameIndex.idHash}`}>
-					{@html marked(ingameIndex.content)}
-				</FaqContentLayout>
+			{#each faqs as { category, questions }, i}
+				{@render headerFAQSectionText(category)}
+				{#each questions as { hashLink, question, answer }}
+					<article id={hashLink}>
+						<h3>{question}</h3>
+						<div class="markdown leading-[1.72]"><SvelteMarkdown source={answer} /></div>
+					</article>
+				{/each}
 			{/each}
 		</div>
 	</section>
 </PageLayout>
+
+<style lang="scss">
+	@reference "$lib/assets/app.css";
+
+	* {
+		@apply scroll-smooth;
+	}
+
+	article {
+		h3 {
+			@apply mb-1 text-xl font-semibold text-orange-400;
+		}
+
+		@apply rounded-xl bg-[#1f1e33]/50 p-5;
+	}
+	.markdown {
+		@apply mt-2.5 border-l-4 border-amber-600 pl-5;
+	}
+</style>

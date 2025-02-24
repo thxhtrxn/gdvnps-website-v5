@@ -7,7 +7,8 @@ export const icons = {
 	download: 'material-symbols:download',
 	windows: 'ri:windows-fill',
 	android: 'material-symbols:android',
-	ios: 'ic:baseline-apple'
+	ios: 'ic:baseline-apple',
+	'rating-star': 'ri:star-half-line'
 };
 export type KnownIcon = keyof typeof icons;
 

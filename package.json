@@ -55,6 +55,7 @@
 		"clsx": "^2.1.1",
 		"marked": "^15.0.7",
 		"sass": "^1.83.4",
+		"svelte-markdown": "^0.4.1",
 		"tailwindcss": "^4.0.3"
 	}
 }

@@ -6,12 +6,14 @@
 	import Icon from '$lib/components/Icon.svelte';
 	import Image from '$lib/components/Image.svelte';
 	import Dot from '$lib/components/Dot.svelte';
+	import ButtonLink from '$lib/components/Button/ButtonLink.svelte';
 
 	import BlurLightFilter from '$lib/components/BlurLightFilter.svelte';
 	import HeroHeader from '$lib/components/HomePageComponents/HeroHeader.svelte';
 	import ShowcaseContentImg from '$lib/components/HomePageComponents/ShowcaseContentImg.svelte';
 
 	import GDVNPSBanner from '$lib/assets/gdvnps-banner.webp';
+	import LVLRSS from '$lib/assets/screenshot/rating-lvl-ss.webp';
 </script>
 
 <MetaBuilder
@@ -51,7 +53,7 @@
 			</div>
 		</div>
 	</div>
-	<section class="grid grid-cols-1 items-center justify-items-center gap-7 lg:mx-16 lg:grid-cols-2">
+	<section class="grid grid-cols-1 items-center justify-items-center gap-9 lg:mx-16 lg:grid-cols-2">
 		<div class="m-0 text-slate-300/90">
 			<p class="font-main/[1.25] leading-[1.75] tracking-wide">
 				GDVNPS là <strong
@@ -82,5 +84,23 @@
 			</p>
 		</div>
 		<ShowcaseContentImg />
+	</section>
+	<section
+		class="mt-20 grid grid-cols-1 items-center justify-items-center gap-9 lg:mx-16 lg:grid-cols-2"
+	>
+		<div class="m-0 text-slate-300/90">
+			<p class="font-main/[1.25] leading-[1.75] tracking-wide">
+				Không quá nghiêm ngặt như Geometry Dash, GDVNPS có tiêu chuẩn xếp hạng không quá cao cho các
+				level.
+			</p>
+			<div>
+				<ButtonLink
+					href="/faq#he-thong-rating"
+					className="text-slate-200 inline-block px-4 py-3 transition-all duration-300 mt-3.5"
+					>Tiêu chuẩn reting level</ButtonLink
+				>
+			</div>
+		</div>
+		<Image loading="eager" src={LVLRSS} alt="Rating level image" />
 	</section>
 </PageLayout>

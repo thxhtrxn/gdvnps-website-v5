@@ -26,7 +26,7 @@
 		style="word-wrap:break-word"
 		class="text-center text-base leading-[1.8] font-normal tracking-wide text-slate-300/90 lg:text-lg"
 	>
-		Được lập ra vào 2024, GDVNPS là <strong>máy chủ GDPS</strong>
+		Được lập ra vào tháng 6 năm 2024, GDVNPS là <strong>máy chủ GDPS</strong>
 		dành cho
 		<strong
 			>cộng đồng người chơi Geometry Dash <span
