@@ -4,7 +4,7 @@
 	function navigateToBrandPath(event: MouseEvent) {
 		if (event.button === 2) {
 			event.preventDefault();
-			goto('/brand');
+			goto('/brand#download-logo');
 		}
 	}
 </script>

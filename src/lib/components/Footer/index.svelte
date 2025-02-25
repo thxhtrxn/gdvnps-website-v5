@@ -17,8 +17,7 @@
 		{ id: 2, label: 'FAQ', href: '/faq' },
 		{ id: 3, label: 'Browser', href: 'https://gdvnps.ps.fhgdps.com/browser' },
 		{ id: 4, label: 'Dashboard', href: 'https://gdvnps.ps.fhgdps.com/dashboard' },
-		{ id: 5, label: 'Brand', href: '/brand' },
-		{ id: 6, label: 'Credit', href: '/credit' }
+		{ id: 5, label: 'Brand', href: '/brand' }
 	];
 </script>
 

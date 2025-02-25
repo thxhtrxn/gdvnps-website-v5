@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import SvelteMarkdown from 'svelte-markdown';
 	import MetaBuilder from '$lib/utils/MetaBuilder.svelte';
 	import PageLayout from '$lib/layouts/PageLayout.svelte';
@@ -6,6 +7,10 @@
 	import BlurLightFilter from '$lib/components/BlurLightFilter.svelte';
 
 	import faqs from '$lib/data/faqs.json';
+
+	onMount(() => {
+		document.documentElement.style.scrollBehavior = 'smooth';
+	});
 </script>
 
 <MetaBuilder

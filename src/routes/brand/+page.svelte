@@ -1,10 +1,15 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import MetaBuilder from '$lib/utils/MetaBuilder.svelte';
 	import PageLayout from '$lib/layouts/PageLayout.svelte';
 
 	import BlurLightFilter from '$lib/components/BlurLightFilter.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 	import ButtonLink from '$lib/components/Button/ButtonLink.svelte';
+
+	onMount(() => {
+		document.documentElement.style.scrollBehavior = 'smooth';
+	});
 </script>
 
 <MetaBuilder
@@ -36,7 +41,7 @@
 			tạo đậm chất tinh thần của người Việt. Hãy cùng nhau tạo ra những thứ tuyệt vời.
 		</p>
 	</section>
-	<section class="mt-16 w-full text-left text-slate-300 lg:px-16">
+	<section class="mt-16 w-full text-left text-slate-300 lg:px-16" id="download-logo">
 		<h2 class="text-3xl/[1.2] font-bold">Tải xuống assets brand</h2>
 		<div class="mt-14 flex items-center justify-center gap-4">
 			<img
