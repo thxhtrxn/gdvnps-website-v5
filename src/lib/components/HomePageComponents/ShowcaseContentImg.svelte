@@ -12,18 +12,18 @@
 		src={LVLGDSS1Webp}
 		width={1600 - 1400}
 		alt="Showcase Image 1"
-		loading="eager"
+		loading="lazy"
 	/>
 	<Image
 		className="shadow"
 		src={LVLGDSS2Webp}
 		width={1600 - 1380}
 		alt="Showcase Image 2"
-		loading="eager"
+		loading="lazy"
 	/>
 </div>
 <div class="block lg:hidden">
-	<Image className="shadow" src={LVLGDSS3Webp} alt="Showcase Image" loading="eager" />
+	<Image className="shadow" src={LVLGDSS3Webp} alt="Showcase Image" loading="lazy" />
 </div>
 
 <style lang="scss" scoped>

@@ -101,6 +101,6 @@
 				>
 			</div>
 		</div>
-		<Image loading="eager" src={LVLRSS} alt="Rating level image" />
+		<Image loading="lazy" src={LVLRSS} alt="Rating level image" />
 	</section>
 </PageLayout>

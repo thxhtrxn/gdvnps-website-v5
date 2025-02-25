@@ -4,16 +4,8 @@
 	import PageLayout from '$lib/layouts/PageLayout.svelte';
 
 	import BlurLightFilter from '$lib/components/BlurLightFilter.svelte';
-	// import FaqContentLayout from '$lib/layouts/FAQContentLayout.svelte';
 
 	import faqs from '$lib/data/faqs.json';
-
-	function anchorIDForTitle(title: string): string {
-		return title
-			.replace(/[^\w\s]/g, '')
-			.replace(/\s+/g, '-')
-			.toLowerCase();
-	}
 </script>
 
 <MetaBuilder

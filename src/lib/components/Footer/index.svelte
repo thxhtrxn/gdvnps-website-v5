@@ -16,9 +16,9 @@
 		{ id: 1, label: 'Tải xuống', href: '/download' },
 		{ id: 2, label: 'FAQ', href: '/faq' },
 		{ id: 3, label: 'Browser', href: 'https://gdvnps.ps.fhgdps.com/browser' },
-		{ id: 4, label: 'Dashboard', href: 'https://gdvnps.ps.fhgdps.com/dashboard' }
-		// { id: 5, label: 'Brand', href: '/brand' },
-		// { id: 6, label: 'Credit', href: '/credit' }
+		{ id: 4, label: 'Dashboard', href: 'https://gdvnps.ps.fhgdps.com/dashboard' },
+		{ id: 5, label: 'Brand', href: '/brand' },
+		{ id: 6, label: 'Credit', href: '/credit' }
 	];
 </script>
 
@@ -42,11 +42,11 @@
 				</a>
 			</nav>
 		</nav>
-		<h1
+		<h2
 			class="hidden bg-gradient-to-l from-red-500 via-orange-500 to-yellow-500 bg-clip-text text-right text-7xl font-bold text-transparent lg:inline-block"
 		>
 			GDVNPS
-		</h1>
+		</h2>
 	</div>
 
 	<div slot="footer_info">

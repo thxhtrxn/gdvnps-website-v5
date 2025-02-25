@@ -5,7 +5,7 @@
 		children: any;
 	}
 
-	let { className = '', style, children }: PageLayoutPropsType = $props();
+	let { className = '', style = '', children }: PageLayoutPropsType = $props();
 </script>
 
 <main

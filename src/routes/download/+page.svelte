@@ -70,7 +70,7 @@
 			</p>
 		{/if}
 	</section>
-	<div class="flex items-center justify-center">
+	<section class="flex items-center justify-center">
 		<div class="flex flex-col items-center justify-center gap-4">
 			<GridRow>
 				<OsDownloadBox
@@ -87,5 +87,5 @@
 				<GeodeDownloadBox />
 			</GridRow>
 		</div>
-	</div>
+	</section>
 </PageLayout>
