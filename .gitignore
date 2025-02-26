@@ -1,5 +1,8 @@
 node_modules
 
+# Static 
+/static/**/*.html
+
 # Output
 .output
 .vercel
