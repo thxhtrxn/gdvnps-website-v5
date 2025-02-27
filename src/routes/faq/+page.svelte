@@ -7,6 +7,10 @@
 	import BlurLightFilter from '$lib/components/BlurLightFilter.svelte';
 
 	let { data } = $props();
+
+	onMount(() => {
+		document.documentElement.style.scrollBehavior = 'smooth';
+	});
 </script>
 
 <MetaBuilder
@@ -31,15 +35,6 @@
 	</section>
 	<section class="flex items-center justify-center">
 		<div class="flex w-full max-w-2xl flex-col flex-nowrap items-stretch gap-4">
-			<!-- {#each faqs as { category, questions }}
-				<h2 class="mt-5 text-2xl font-bold text-orange-400">{category}</h2>
-				{#each questions as { hashLink, question, answer }}
-					<article id={hashLink}>
-						<h3>{question}</h3>
-						<div class="markdown leading-[1.72]"><SvelteMarkdown source={answer} /></div>
-					</article>
-				{/each}
-			{/each} -->
 			{#each data.summaries as { category, questions }}
 				<h2 class="mt-5 text-2xl font-bold text-orange-400">{category}</h2>
 				{#each questions as { hashLink, question, answer }}

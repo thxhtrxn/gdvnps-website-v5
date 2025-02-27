@@ -13,6 +13,24 @@ export const faqs = [
 				question: 'Ai đã tạo ra GDVNPS?',
 				answer:
 					'GDVNPS được **tạo ra và phát triển** bởi: [vradient](https://github.com/TacoEnjoyer/), [thxhtrxn](https://github.com/thxhtrxn/) và [Lamnhiem](https://discord.com/users/751325704448376852).'
+			},
+			{
+				hashLink: 'may-chu-cua-gdvnps-duoc-dat-o-dau',
+				question: 'Máy chủ của GDVNPS được đặt ở đâu?',
+				answer:
+					'Máy chủ của GDVNPS được đặt ở **GDPSFH**, một nền tảng lưu trữ các GDPS miễn phí. Trong tương lai sẽ có kế hoạch tự lập máy chủ riêng cho GDVNPS nếu có thể.'
+			},
+			{
+				hashLink: 'vngdps-co-phai-la-gdvnps-khong',
+				question: 'VNGDPS có phải là GDVNPS không?',
+				answer:
+					'**Không**, VNGDPS là một **GDPS khác**, *sinh sau đẻ muộn* với GDVNPS và không liên quan gì đến GDVNPS.'
+			},
+			{
+				hashLink: 'gdvnps-co-luat-le-khong',
+				question: 'GDVNPS có luật lệ không?',
+				answer:
+					'**Có**, GDVNPS cũng có luật lệ riêng của mình, bạn có thể xem tại kênh `📜luật` trên [server Discord](https://discord.gg/6NRNqPPnwe) của chúng mình.'
 			}
 		]
 	},
