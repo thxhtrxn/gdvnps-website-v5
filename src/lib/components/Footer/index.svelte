@@ -4,8 +4,6 @@
 	import Icon from '../Icon.svelte';
 	import Dot from '../Dot.svelte';
 
-	import { discordLink } from '$lib';
-
 	type FooterLinkObjType = {
 		id: number;
 		label: string;
@@ -15,8 +13,8 @@
 	const footerLinks = [
 		{ id: 1, label: 'Tải xuống', href: '/download' },
 		{ id: 2, label: 'FAQ', href: '/faq' },
-		{ id: 3, label: 'Browser', href: 'https://gdvnps.ps.fhgdps.com/browser' },
-		{ id: 4, label: 'Dashboard', href: 'https://gdvnps.ps.fhgdps.com/dashboard' },
+		{ id: 3, label: 'Browser', href: '/browser' },
+		{ id: 4, label: 'Dashboard', href: '/dashboard' },
 		{ id: 5, label: 'Brand', href: '/brand' }
 	];
 </script>
@@ -32,8 +30,7 @@
 					<Link variant="footer" href={footerLink.href}>{footerLink.label}</Link>
 				{/each}
 				<a
-					href={discordLink}
-					target="_blank"
+					href="/discord"
 					class="flex items-center gap-x-1.5 text-left text-base text-slate-300/90 transition-all duration-150 hover:text-slate-200/90"
 					title="Discord"
 				>
@@ -49,8 +46,8 @@
 	</div>
 
 	<div slot="footer_info">
-		<div class="py-8">
-			<div class="flex items-center justify-between gap-6 py-3">
+		<div>
+			<div class="flex items-center justify-between gap-6 py-5">
 				<div class="flex items-center gap-4">
 					<img
 						src="/gdvnps-logo-no-bg.svg"
@@ -64,16 +61,18 @@
 					</p>
 				</div>
 			</div>
-			<div class="py-3">
-				<span class="flex items-center text-base text-slate-300/90"
-					><h2 class="font-semibold">Legal:</h2>
-					<a href="/terms-and-conditions" class="px-1 hover:text-slate-200/90">Terms & Conditions</a
-					><span class="px-1"><Dot /></span><a
-						href="/privacy-policy"
-						class="px-1 hover:text-slate-200/90">Privacy Policy</a
-					></span
-				>
-			</div>
+		</div>
+	</div>
+
+	<div slot="footer_legal">
+		<div class="py-8">
+			<span class="flex items-center text-base text-slate-300/90">
+				<a href="/terms-and-conditions" class="px-1 hover:text-slate-200/90">Terms & Conditions</a
+				><span class="px-1"><Dot /></span><a
+					href="/privacy-policy"
+					class="px-1 hover:text-slate-200/90">Privacy Policy</a
+				></span
+			>
 		</div>
 	</div>
 </FooterLayout>

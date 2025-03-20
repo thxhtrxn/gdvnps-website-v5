@@ -3,5 +3,7 @@
 		<slot name="footer_link" />
 		<hr class="border-gray-800" />
 		<slot name="footer_info" />
+		<hr class="border-gray-800" />
+		<slot name="footer_legal" />
 	</div>
 </footer>

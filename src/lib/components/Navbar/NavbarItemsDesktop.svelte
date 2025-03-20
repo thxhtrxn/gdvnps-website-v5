@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { navLinks, discordLink } from '$lib';
+	import { navLinks } from '$lib';
 	import Icon from '../Icon.svelte';
 	import Link from '../Link.svelte';
 </script>
@@ -15,7 +15,7 @@
 </ul>
 <div class="hidden shrink lg:flex">
 	<div class="flex flex-wrap items-center gap-1">
-		<a href={discordLink} target="_blank" class="inline-block" title="Discord">
+		<a href="/discord" class="inline-block" title="Discord">
 			<Icon icon="discord" size={28} />
 		</a>
 	</div>

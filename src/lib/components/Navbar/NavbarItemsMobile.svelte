@@ -1,7 +1,7 @@
 <script>
 	import { cubicOut, backOut } from 'svelte/easing';
 	import { blur } from 'svelte/transition';
-	import { navLinks, discordLink } from '$lib';
+	import { navLinks } from '$lib';
 	import Icon from '../Icon.svelte';
 	import Link from '../Link.svelte';
 	import ButtonRow from '../Button/ButtonRow.svelte';
@@ -17,7 +17,7 @@
 	<!-- Discord link button -->
 	<ButtonLink
 		variant="outline"
-		href={discordLink}
+		href="/discord"
 		label="Discord"
 		className="flex items-center gap-1.5 px-2 py-1"
 		title="Discord"><Icon icon="discord" size={37} /><span><p>Discord</p></span></ButtonLink

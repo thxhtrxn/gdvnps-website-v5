@@ -20,15 +20,17 @@ type NavLinkObjType = {
 export const navLinks: NavLinkObjType = [
 	{ id: 1, label: 'Tải xuống', href: '/download' },
 	{ id: 2, label: 'FAQ', href: '/faq' },
-	{ id: 3, label: 'Browser', href: 'https://gdvnps.ps.fhgdps.com/browser/' },
+	{ id: 3, label: 'Browser', href: '/browser' },
 	{
 		id: 4,
 		label: 'Dashboard',
-		href: 'https://gdvnps.ps.fhgdps.com/dashboard'
+		href: '/dashboard'
 	}
 ];
 
-export const discordLink: string = 'https://discord.gg/SmBs7xGSWM';
+export const discordLink: string = 'https://discord.gg/6NRNqPPnwe';
+export const dashboardLink: string = 'https://gdvnps.ps.fhgdps.com/dashboard';
+export const browserLink: string = 'https://gdvnps.ps.fhgdps.com/browser/';
 
 export type AnchorLinkTarget = '_self' | '_blank' | '_parent' | '_top';
 

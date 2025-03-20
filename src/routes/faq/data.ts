@@ -30,7 +30,7 @@ export const faqs = [
 				hashLink: 'gdvnps-co-luat-le-khong',
 				question: 'GDVNPS có luật lệ không?',
 				answer:
-					'**Có**, GDVNPS cũng có luật lệ riêng của mình, bạn có thể xem tại kênh `📜luật` trên [server Discord](https://discord.gg/6NRNqPPnwe) của chúng mình.'
+					'**Có**, GDVNPS cũng có luật lệ riêng của mình, bạn có thể xem tại kênh `📜luật` trên [server Discord](/discord) của chúng mình.'
 			}
 		]
 	},
@@ -41,7 +41,7 @@ export const faqs = [
 				hashLink: 'quen-mat-khau',
 				question: 'Tôi quên mật khẩu, tôi phải làm thế nào để khôi phục lại mật khẩu?',
 				answer:
-					'Các bạn có thể liên hệ với **Team Moderator** trên [server Discord](https://discord.gg/SmBs7xGSWM) để họ giúp đỡ bạn **đổi mật khẩu**.'
+					'Các bạn có thể liên hệ với **Team Moderator** trên [server Discord](/discord) để họ giúp đỡ bạn **đổi mật khẩu**.'
 			},
 			{
 				hashLink: 'he-thong-rating',
