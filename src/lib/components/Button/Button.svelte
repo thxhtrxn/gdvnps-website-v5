@@ -5,7 +5,7 @@
 	type ButtonVariant = 'fill' | 'outline';
 
 	interface ButtonPropsType {
-		label: string;
+		label?: string;
 		className?: string;
 		onClickFn?: () => void;
 		fontSize?: TailwindFontSizeClass | string;

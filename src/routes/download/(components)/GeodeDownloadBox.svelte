@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Box from '../Box.svelte';
+	import Box from '$lib/components/Box.svelte';
 	import DownloadButton from './DownloadButton.svelte';
-	import Icon from '../Icon.svelte';
+	import Icon from '$lib/components/Icon.svelte';
 </script>
 
 <Box>

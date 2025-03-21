@@ -1,4 +1,4 @@
-import { faqs } from './data';
+import { faqs } from './(data)/data';
 
 export function load() {
 	return {

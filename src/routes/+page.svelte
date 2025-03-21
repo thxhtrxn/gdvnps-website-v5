@@ -9,11 +9,11 @@
 	import ButtonLink from '$lib/components/Button/ButtonLink.svelte';
 
 	import BlurLightFilter from '$lib/components/BlurLightFilter.svelte';
-	import HeroHeader from '$lib/components/HomePageComponents/HeroHeader.svelte';
-	import ShowcaseContentImg from '$lib/components/HomePageComponents/ShowcaseContentImg.svelte';
+	import HeroHeader from './(components)/HeroHeader.svelte';
+	import ShowcaseContentImg from './(components)/ShowcaseContentImg.svelte';
 
 	import GDVNPSBanner from '$lib/assets/gdvnps-banner.webp';
-	import LVLRSS from '$lib/assets/screenshot/rating-lvl-ss.webp';
+	import LVLRSS from './(assets)/rating-lvl-ss.webp';
 </script>
 
 <MetaBuilder

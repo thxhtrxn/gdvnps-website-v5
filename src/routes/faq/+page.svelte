@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import SvelteMarkdown from 'svelte-markdown';
+
 	import MetaBuilder from '$lib/utils/MetaBuilder.svelte';
 	import PageLayout from '$lib/layouts/PageLayout.svelte';
 
@@ -49,7 +50,7 @@
 </PageLayout>
 
 <style lang="scss">
-	@reference "$lib/assets/app.css";
+	@reference "$routes/app.css";
 
 	* {
 		@apply scroll-smooth;

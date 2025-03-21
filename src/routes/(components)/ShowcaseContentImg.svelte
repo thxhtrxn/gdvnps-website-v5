@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Image from '../Image.svelte';
+	import Image from '$lib/components/Image.svelte';
 
-	import LVLGDSS1Webp from '$lib/assets/screenshot/lvl-gp-ss-1.webp';
-	import LVLGDSS2Webp from '$lib/assets/screenshot/lvl-gp-ss-2.webp';
-	import LVLGDSS3Webp from '$lib/assets/screenshot/lvl-gp-ss-3.webp';
+	import LVLGDSS1Webp from '../(assets)/lvl-gp-ss-1.webp';
+	import LVLGDSS2Webp from '../(assets)/lvl-gp-ss-2.webp';
+	import LVLGDSS3Webp from '../(assets)/lvl-gp-ss-3.webp';
 </script>
 
 <div class="img-parent mt-2.5 hidden lg:mt-0 lg:flex">

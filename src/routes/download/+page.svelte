@@ -5,8 +5,8 @@
 
 	import BlurLightFilter from '$lib/components/BlurLightFilter.svelte';
 	import GridRow from '$lib/components/GridRow.svelte';
-	import OsDownloadBox from '$lib/components/DownloadPageComponents/OSDownloadBox.svelte';
-	import GeodeDownloadBox from '$lib/components/DownloadPageComponents/GeodeDownloadBox.svelte';
+	import OsDownloadBox from './(components)/OSDownloadBox.svelte';
+	import GeodeDownloadBox from './(components)/GeodeDownloadBox.svelte';
 
 	interface ReleaseDataType {
 		tag_name: string;

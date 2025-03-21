@@ -1,6 +1,6 @@
 <script lang="ts">
-	import ButtonLink from '../Button/ButtonLink.svelte';
-	import Icon from '../Icon.svelte';
+	import ButtonLink from '$lib/components/Button/ButtonLink.svelte';
+	import Icon from '$lib/components/Icon.svelte';
 
 	let { href, children }: { href: string | undefined; children: any } = $props();
 </script>
