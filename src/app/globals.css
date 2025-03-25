@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+:root {
+	--background: #010913;
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
+}
+
+body {
+	@apply m-0 box-border p-0;
+}
