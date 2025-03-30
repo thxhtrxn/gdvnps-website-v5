@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --default-font-family: Inter, sans-serif;
+}
+
+:root {
+  --main-bg-col: #010913;
+  --scroll-bar-color: #f97316bb var(--main-bg-col);
+}
+
+html,
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-bar-color);
+}

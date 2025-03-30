@@ -1,6 +1,5 @@
 {
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.formatOnSave": true,
-	"explorer.compactFolders": false,
-	"tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]]
+    "editor.formatOnSave": true,
+    "explorer.compactFolders": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
