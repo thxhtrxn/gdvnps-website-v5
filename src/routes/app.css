@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+
+:root {
+	--scroll-bar-color: #f97316bb var(--bg-color);
+	--bg-color: #010913;
+	--font-be-vn-pro: 'Be Vietnam Pro', sans-serif;
+}
+
+@layer base {
+	html,
+	body {
+		font-family: 'Inter', sans-serif;
+		scrollbar-width: thin;
+		scrollbar-color: var(--scroll-bar-color);
+	}
+
+	body {
+		@apply overflow-x-hidden break-words;
+	}
+}
+
+.markdown p {
+	@apply text-slate-300;
+}
+.markdown a {
+	@apply text-red-300 transition-all duration-150 hover:text-white hover:underline;
+}
+.markdown strong {
+	@apply text-red-400;
+}
+.markdown ul {
+	@apply mt-2;
+}
+.markdown li {
+	list-style: circle;
+	list-style-position: inside;
+	@apply mb-3 text-slate-300;
+}
