@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { createQuery } from '@tanstack/svelte-query';
 	import PageLayout from '$lib/layouts/PageLayout.svelte';
 	import MetaBuilder from '$lib/utils/MetaBuilder.svelte';
-	import { icons } from '$lib';
 
 	import BlurLightFilter from '$lib/components/BlurLightFilter.svelte';
 	import GridRow from '$lib/components/GridRow.svelte';
@@ -12,29 +12,17 @@
 	import OSIntroduce from '$lib/components/OSIntroduce.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 
-	interface ReleaseDataType {
-		tag_name: string;
-		assets: {
-			name: string;
-			browser_download_url: string;
-		}[];
-	}
-
-	let release: ReleaseDataType | null = null;
-
-	onMount(async () => {
-		try {
-			const res = await fetch('https://api.github.com/repos/TacoEnjoyer/gdvnps/releases/latest');
-			// const res = await fetch('https://api.github.com/repos/TacoEnjoyer/gdvnps/releases/194288434');
-			release = await res.json();
-			// console.log(release);
-		} catch (error) {
-			console.error('Error fetching release data:', error);
-		}
+	const releaseQuery = createQuery({
+		queryKey: ['releases'],
+		queryFn: async () =>
+			await fetch('https://api.github.com/repos/TacoEnjoyer/gdvnps/releases/latest').then((r) =>
+				r.json()
+			),
+		refetchInterval: 30000
 	});
 
 	const getDownloadLink = (osKeyword: string) => {
-		return release?.assets.find((asset: any) =>
+		return $releaseQuery?.data?.assets.find((asset: any) =>
 			asset.name.toLowerCase().includes(osKeyword.toLowerCase())
 		)?.browser_download_url;
 	};
@@ -52,8 +40,8 @@
 	>
 		<section>
 			<div>
-				<div class="mx-auto max-w-5xl px-6">
-					<div class="mx-auto mt-12 mb-3.5 max-w-lg space-y-6 text-center">
+				<div class="mx-auto max-w-5xl">
+					<div class="mx-auto mb-3.5 max-w-lg space-y-6 text-center">
 						<h1
 							class="w-full text-center font-(family-name:--font-be-vn-pro) text-4xl/[1.2] font-extrabold lg:text-[2.81rem]/[1.2]"
 						>
@@ -63,15 +51,21 @@
 								>GDVNPS</span
 							>
 						</h1>
-						{#if release}
+						{#if $releaseQuery.isSuccess}
 							<p class="font-main/[1.25] leading-[1.75] tracking-wide text-slate-300/90">
-								Phiên bản: <strong class="text-orange-400">{release.tag_name}</strong>
+								Phiên bản: <strong class="text-orange-400">{$releaseQuery.data.tag_name}</strong>
 							</p>
-						{:else}
+						{:else if $releaseQuery.isLoading}
 							<p
 								class="z-30 text-center text-base leading-[1.85] font-normal tracking-wide text-slate-300/90 lg:text-lg"
 							>
 								Phiên bản: Đang kiểm tra...
+							</p>
+						{:else if $releaseQuery.isError}
+							<p
+								class="z-30 text-center text-base leading-[1.85] font-normal tracking-wide text-slate-300/90 lg:text-lg"
+							>
+								Đã xảy ra lỗi, vui lòng thử lại sau (Lỗi: {$releaseQuery.error.message})
 							</p>
 						{/if}
 					</div>
@@ -84,31 +78,37 @@
 						></div>
 						<div class="absolute inset-0 m-auto flex size-fit justify-center gap-2">
 							<OSIntroduce
-								class="size-16 border-white/10 bg-white/25 shadow-xl shadow-white/15 backdrop-blur-2xl backdrop-grayscale select-none"
+								class="size-16 border-white/10 bg-gray-500/55 shadow-xl shadow-white/15 backdrop-blur-2xl backdrop-grayscale select-none"
 								isCenter={true}
 							>
-								<img src="/gdvnps-logo-no-bg.svg" alt="GDVNPS's logo" width={58} height={58} />
+								<img
+									src="/gdvnps-logo-no-bg.svg"
+									alt="GDVNPS's logo"
+									class="pointer-events-none"
+									width={58}
+									height={58}
+								/>
 							</OSIntroduce>
 						</div>
 						<div>
 							<Marquee>
 								<OSIntroduce>
-									<Icon icon="android" size={25} />
+									<Icon icon="android" size={25} fill="#364153" />
 								</OSIntroduce>
 								<OSIntroduce>
-									<Icon icon="ios" size={25} />
+									<Icon icon="ios" size={25} fill="#364153" />
 								</OSIntroduce>
 								<OSIntroduce>
-									<Icon icon="windows" size={25} />
+									<Icon icon="windows" size={25} fill="#364153" />
 								</OSIntroduce>
 								<OSIntroduce>
-									<Icon icon="android" size={25} />
+									<Icon icon="android" size={25} fill="#364153" />
 								</OSIntroduce>
 								<OSIntroduce>
-									<Icon icon="ios" size={25} />
+									<Icon icon="ios" size={25} fill="#364153" />
 								</OSIntroduce>
 								<OSIntroduce>
-									<Icon icon="windows" size={25} />
+									<Icon icon="windows" size={25} fill="#364153" />
 								</OSIntroduce>
 							</Marquee>
 						</div>
@@ -117,56 +117,44 @@
 							<!-- gap={24} speed={20} speedOnHover={10} -->
 							<Marquee reverse>
 								<OSIntroduce>
-									<Icon icon="android" size={25} />
-									<!-- <VSCodium /> -->
+									<Icon icon="android" size={25} fill="#364153" />
 								</OSIntroduce>
 								<OSIntroduce>
-									<Icon icon="ios" size={25} />
-									<!-- <MediaWiki /> -->
+									<Icon icon="ios" size={25} fill="#364153" />
 								</OSIntroduce>
 								<OSIntroduce>
-									<Icon icon="windows" size={25} />
-									<!-- <GooglePaLM /> -->
+									<Icon icon="windows" size={25} fill="#364153" />
 								</OSIntroduce>
 								<OSIntroduce>
-									<Icon icon="android" size={25} />
-									<!-- <VSCodium /> -->
+									<Icon icon="android" size={25} fill="#364153" />
 								</OSIntroduce>
 								<OSIntroduce>
-									<Icon icon="ios" size={25} />
-									<!-- <MediaWiki /> -->
+									<Icon icon="ios" size={25} fill="#364153" />
 								</OSIntroduce>
 								<OSIntroduce>
-									<Icon icon="windows" size={25} />
-									<!-- <GooglePaLM /> -->
+									<Icon icon="windows" size={25} fill="#364153" />
 								</OSIntroduce>
 							</Marquee>
 						</div>
 						<div>
 							<Marquee>
 								<OSIntroduce>
-									<Icon icon="android" size={25} />
-									<!-- <VSCodium /> -->
+									<Icon icon="android" size={25} fill="#364153" />
 								</OSIntroduce>
 								<OSIntroduce>
-									<Icon icon="ios" size={25} />
-									<!-- <MediaWiki /> -->
+									<Icon icon="ios" size={25} fill="#364153" />
 								</OSIntroduce>
 								<OSIntroduce>
-									<Icon icon="windows" size={25} />
-									<!-- <GooglePaLM /> -->
+									<Icon icon="windows" size={25} fill="#364153" />
 								</OSIntroduce>
 								<OSIntroduce>
-									<Icon icon="android" size={25} />
-									<!-- <VSCodium /> -->
+									<Icon icon="android" size={25} fill="#364153" />
 								</OSIntroduce>
 								<OSIntroduce>
-									<Icon icon="ios" size={25} />
-									<!-- <MediaWiki /> -->
+									<Icon icon="ios" size={25} fill="#364153" />
 								</OSIntroduce>
 								<OSIntroduce>
-									<Icon icon="windows" size={25} />
-									<!-- <GooglePaLM /> -->
+									<Icon icon="windows" size={25} fill="#364153" />
 								</OSIntroduce>
 							</Marquee>
 						</div>

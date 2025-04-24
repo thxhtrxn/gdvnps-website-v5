@@ -24,6 +24,10 @@ const config = {
 
 		alias: {
 			$routes: 'src/routes/'
+		},
+		csp: {
+			mode: 'hash',
+			directives: { 'script-src': ['self'] }
 		}
 	}
 };
