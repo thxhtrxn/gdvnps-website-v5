@@ -63,7 +63,7 @@ export const faqs = [
 				hashLink: 'toi-khong-cai-duoc-geode-cho-gdvnps-tren-android',
 				question: 'Tôi không cài được Geode cho GDVNPS trên Android!',
 				answer:
-					'Vì bản Geode cho Android từ nguồn [https://geode-sdk.org/](https://geode-sdk.org/) **chỉ dành** cho phiên bản GD chính thức **của RobTop Games**. Để sử dụng được **Geode cho GDVNPS** trên **Android**, bạn hãy tải tại đây: [https://github.com/TacoEnjoyer/gdvnps/releases/download/geode/geode-launcher-v1.4.2-gdvnps-build.apk](https://github.com/TacoEnjoyer/gdvnps/releases/download/geode/geode-launcher-v1.4.2-gdvnps-build.apk)'
+					'Vì bản Geode cho Android từ nguồn [https://geode-sdk.org/](https://geode-sdk.org/) **chỉ dành** cho phiên bản GD chính thức **của RobTop Games**. Để sử dụng được **Geode cho GDVNPS** trên **Android**, bạn hãy tải tại đây: [https://github.com/TacoEnjoyer/gdvnps/releases/download/geode/geode-launcher-v1.5.0-gdvnps-build.apk](https://github.com/TacoEnjoyer/gdvnps/releases/download/geode/geode-launcher-v1.5.0-gdvnps-build.apk)'
 			}
 		]
 	}
