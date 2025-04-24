@@ -14,7 +14,7 @@
 	</p>
 	<div>
 		<DownloadButton
-			href="https://github.com/TacoEnjoyer/gdvnps/releases/download/geode/geode-launcher-v1.4.2-gdvnps-build.apk"
+			href="https://github.com/TacoEnjoyer/gdvnps/releases/download/geode/geode-launcher-v1.5.0-gdvnps-build.apk"
 			>Tải xuống</DownloadButton
 		>
 	</div>
