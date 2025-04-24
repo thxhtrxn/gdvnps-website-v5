@@ -8,11 +8,13 @@
         "@tailwindcss/vite": "^4.0.3",
         "@tanstack/svelte-query": "^5.74.4",
         "@tanstack/svelte-query-devtools": "^5.74.6",
+        "clsx": "^2.1.1",
         "dotenv": "^16.4.7",
         "jquery": "^3.7.1",
         "runed": "^0.25.0",
         "sass": "^1.83.4",
         "svelte-markdown": "^0.4.1",
+        "tailwind-merge": "^3.2.0",
         "tailwindcss": "^4.0.3",
       },
       "devDependencies": {
@@ -859,6 +861,8 @@
     "svelte-eslint-parser": ["svelte-eslint-parser@0.43.0", "", { "dependencies": { "eslint-scope": "^7.2.2", "eslint-visitor-keys": "^3.4.3", "espree": "^9.6.1", "postcss": "^8.4.39", "postcss-scss": "^4.0.9" }, "peerDependencies": { "svelte": "^3.37.0 || ^4.0.0 || ^5.0.0" }, "optionalPeers": ["svelte"] }, "sha512-GpU52uPKKcVnh8tKN5P4UZpJ/fUDndmq7wfsvoVXsyP+aY0anol7Yqo01fyrlaWGMFfm4av5DyrjlaXdLRJvGA=="],
 
     "svelte-markdown": ["svelte-markdown@0.4.1", "", { "dependencies": { "@types/marked": "^5.0.1", "marked": "^5.1.2" }, "peerDependencies": { "svelte": "^4.0.0" } }, "sha512-pOlLY6EruKJaWI9my/2bKX8PdTeP5CM0s4VMmwmC2prlOkjAf+AOmTM4wW/l19Y6WZ87YmP8+ZCJCCwBChWjYw=="],
+
+    "tailwind-merge": ["tailwind-merge@3.2.0", "", {}, "sha512-FQT/OVqCD+7edmmJpsgCsY820RTD5AkBryuG5IUqR5YQZSdj5xlH5nLgH7YPths7WsLPSpSBNneJdM8aS8aeFA=="],
 
     "tailwindcss": ["tailwindcss@4.1.4", "", {}, "sha512-1ZIUqtPITFbv/DxRmDr5/agPqJwF69d24m9qmM1939TJehgY539CtzeZRjbLt5G6fSy/7YqqYsfvoTEw9xUI2A=="],
 
