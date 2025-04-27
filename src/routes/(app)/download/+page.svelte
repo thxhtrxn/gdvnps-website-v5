@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { createQuery } from '@tanstack/svelte-query';
 	import PageLayout from '$lib/layouts/PageLayout.svelte';
 	import MetaBuilder from '$lib/utils/MetaBuilder.svelte';
@@ -18,7 +17,7 @@
 			await fetch('https://api.github.com/repos/TacoEnjoyer/gdvnps/releases/latest').then((r) =>
 				r.json()
 			),
-		refetchInterval: 30000
+		refetchInterval: 15000
 	});
 
 	const getDownloadLink = (osKeyword: string) => {
@@ -32,6 +31,14 @@
 	title="Tải Xuống GDVNPS"
 	desc="Tải xuống GDVNPS cho Windows, Android, iOS và Geode cho GDVNPS Android"
 />
+
+{#snippet OSBox(
+	OS_name: 'Windows' | 'Android' | 'iOS',
+	OS_icon: 'windows' | 'android' | 'ios',
+	OS_downloadLink: any
+)}
+	<OsDownloadBox {OS_name} {OS_icon} {OS_downloadLink} />
+{/snippet}
 
 <BlurLightFilter />
 <PageLayout>
@@ -166,17 +173,9 @@
 	<section class="flex items-center justify-center">
 		<div class="flex flex-col items-center justify-center gap-4">
 			<GridRow>
-				<OsDownloadBox
-					OS_name="Windows"
-					OS_icon="windows"
-					OS_downloadLink={getDownloadLink('zip')}
-				/>
-				<OsDownloadBox
-					OS_name="Android"
-					OS_icon="android"
-					OS_downloadLink={getDownloadLink('apk')}
-				/>
-				<OsDownloadBox OS_name="iOS" OS_icon="ios" OS_downloadLink={getDownloadLink('ipa')} />
+				{@render OSBox('Windows', 'windows', getDownloadLink('zip'))}
+				{@render OSBox('Android', 'android', getDownloadLink('apk'))}
+				{@render OSBox('iOS', 'ios', getDownloadLink('ipa'))}
 				<GeodeDownloadBox />
 			</GridRow>
 		</div>
