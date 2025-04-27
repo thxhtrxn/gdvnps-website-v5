@@ -3,7 +3,6 @@ FROM oven/bun:1
 COPY . .    
 
 RUN bun i
-RUN bun run format
 RUN bun --bun run build
 
 USER bun
