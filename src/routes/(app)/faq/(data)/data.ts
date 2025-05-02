@@ -23,7 +23,7 @@ export const faqs = [
 				hashLink: 'may-chu-cua-gdvnps-duoc-dat-o-dau',
 				question: 'Máy chủ của GDVNPS được đặt ở đâu?',
 				answer:
-					'Máy chủ của GDVNPS được đặt ở **GDPSFH**, một nền tảng lưu trữ các GDPS miễn phí. Trong tương lai sẽ có kế hoạch tự lập máy chủ riêng cho GDVNPS nếu có thể.'
+					'Máy chủ của GDVNPS được đặt tại **Việt Nam**, trước đây GDVNPS được đặt tại GDPSFH nhưng sau đó đã được chuyển về máy chủ riêng của GDVNPS.'
 			},
 			{
 				hashLink: 'vngdps-co-phai-la-gdvnps-khong',
