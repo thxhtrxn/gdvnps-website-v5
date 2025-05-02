@@ -29,8 +29,8 @@ export const navLinks: NavLinkObjType = [
 ];
 
 export const discordLink: string = 'https://discord.gg/6NRNqPPnwe';
-export const dashboardLink: string = 'https://gdvnps.ps.fhgdps.com/dashboard';
-export const browserLink: string = 'https://gdvnps.ps.fhgdps.com/browser/';
+export const dashboardLink: string = 'https://gdvnps.site/storage/dashboard';
+export const browserLink: string = 'https://gdvnps.site/storage/browser';
 
 export type AnchorLinkTarget = '_self' | '_blank' | '_parent' | '_top';
 
