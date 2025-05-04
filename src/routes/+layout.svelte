@@ -1,14 +1,19 @@
 <script lang="ts">
-	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
-	import { SvelteQueryDevtools } from '@tanstack/svelte-query-devtools';
-	import './app.css';
-
-	let { children } = $props();
-
+	import { ProgressBar } from '@prgm/sveltekit-progress-bar';
+	import { QueryClientProvider, QueryClient } from '@tanstack/svelte-query';
 	const queryClient = new QueryClient();
+
+	import Navbar from '$lib/components/Navbar/index.svelte';
+	import Footer from '$lib/components/Footer/index.svelte';
+	let { children } = $props();
 </script>
 
-<QueryClientProvider client={queryClient}>
-	{@render children()}
-	<SvelteQueryDevtools />
+<QueryClientProvider>
+	<ProgressBar class="text-orange-400" />
+
+	<Navbar />
+	<div aria-label="Content" class="mx-auto w-full max-w-screen-2xl px-4 lg:px-12">
+		{@render children()}
+	</div>
+	<Footer />
 </QueryClientProvider>

@@ -42,7 +42,7 @@
 		>
 		<ButtonLink
 			variant="outline"
-			href="https://gdvnps.site/storage/dashboard"
+			href="https://gdps.gdvnps.site/storage/dashboard"
 			className="text-slate-200 inline-block px-4 py-3 transition-all duration-300"
 			>Dashboard</ButtonLink
 		>

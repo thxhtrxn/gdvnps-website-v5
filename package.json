@@ -13,7 +13,8 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
 		"lint-staged": "lint-staged",
-		"prepare-husky": "husky"
+		"prepare-husky": "husky",
+		"fix-folders": "bash -c \"for f in build/*.html; do name=$(basename \\\"$f\\\" .html); mkdir -p build/$name; mv build/$name.html build/$name/index.html; done\""
 	},
 	"commitlint": {
 		"extends": [
@@ -34,7 +35,7 @@
 		"@prgm/sveltekit-progress-bar": "^3.0.2",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/adapter-vercel": "^5.5.2",
-		"@sveltejs/kit": "^2.16.0",
+		"@sveltejs/kit": "^2.20.8",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"@types/jquery": "^3.5.32",
 		"eslint": "^9.18.0",

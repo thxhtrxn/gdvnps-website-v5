@@ -49,7 +49,7 @@
 				<Dot />
 				{@render infoLink('/download', 'download', 'Tải xuống')}
 				<Dot />
-				{@render infoLink('https://gdvnps.ps.fhgdps.com/dashboard', 'dashboard', 'Dashboard')}
+				{@render infoLink('https://gdps.gdvnps.site/storage/dashboard', 'dashboard', 'Dashboard')}
 			</div>
 		</div>
 	</div>
