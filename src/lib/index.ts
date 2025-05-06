@@ -34,6 +34,9 @@ export const browserLink: string = 'https://gdps.gdvnps.site/storage/browser';
 
 export type AnchorLinkTarget = '_self' | '_blank' | '_parent' | '_top';
 
+export const GEODE_DOWNLOAD_URL_ANDROID: string =
+	'https://github.com/TacoEnjoyer/gdvnps/releases/download/geode/geode-launcher-v1.6.1-gdvnps-build.apk';
+
 export type TailwindFontSizeClass =
 	| 'text-xs'
 	| 'text-sm'

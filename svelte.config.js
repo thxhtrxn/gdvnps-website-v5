@@ -22,7 +22,8 @@ const config = {
 		// }),
 		alias: {
 			$routes: 'src/routes/',
-			$lib: 'src/lib/'
+			$lib: 'src/lib/',
+			$src: 'src/'
 		}
 	}
 };

@@ -78,8 +78,11 @@
 	>
 		<div class="m-0 text-slate-300/90">
 			<p class="font-main/[1.25] leading-[1.75] tracking-wide">
-				Không quá <strong class="text-orange-400">nghiêm ngặt</strong> như Geometry Dash, GDVNPS có
-				tiêu chuẩn xếp hạng <strong class="text-orange-400">không quá cao</strong> cho các level.
+				GDVNPS được tạo ra để <strong class="text-orange-400">giúp các creator Việt Nam</strong>
+				phát triển kỹ năng làm level. Không <strong class="text-orange-400">nghiêm ngặt</strong>
+				như Geometry Dash, tiêu chuẩn xếp hạng ở đây cũng
+				<strong class="text-orange-400">không quá cao</strong>, để mọi người có thêm động lực học
+				hỏi và thử sức.
 			</p>
 			<div>
 				<ButtonLink

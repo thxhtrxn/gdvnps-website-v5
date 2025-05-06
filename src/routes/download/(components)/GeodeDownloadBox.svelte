@@ -2,6 +2,8 @@
 	import Box from '$lib/components/Box.svelte';
 	import DownloadButton from './DownloadButton.svelte';
 	import Icon from '$lib/components/Icon.svelte';
+
+	import { GEODE_DOWNLOAD_URL_ANDROID } from '$lib';
 </script>
 
 <Box>
@@ -13,9 +15,6 @@
 		Tải xuống Geode cho <strong>Android</strong>.
 	</p>
 	<div>
-		<DownloadButton
-			href="https://github.com/TacoEnjoyer/gdvnps/releases/download/geode/geode-launcher-v1.5.0-gdvnps-build.apk"
-			>Tải xuống</DownloadButton
-		>
+		<DownloadButton href={GEODE_DOWNLOAD_URL_ANDROID}>Tải xuống</DownloadButton>
 	</div>
 </Box>
