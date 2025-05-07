@@ -11,7 +11,7 @@
         "@tanstack/svelte-query": "^5.74.4",
         "@tanstack/svelte-query-devtools": "^5.74.6",
         "clsx": "^2.1.1",
-        "dotenv": "^16.4.7",
+        "dotenv": "^16.5.0",
         "jquery": "^3.7.1",
         "runed": "^0.25.0",
         "sass": "^1.83.4",

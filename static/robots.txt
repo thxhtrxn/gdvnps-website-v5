@@ -3,7 +3,4 @@ Disallow: /discord
 Disallow: /dashboard
 Disallow: /browser
 
-User-agent: Baiduspider
-Disallow: /
-
 Sitemap: https://gdvnps.site/sitemap.xml
