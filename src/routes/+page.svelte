@@ -14,6 +14,7 @@
 
 	import GDVNPSBanner from '$lib/assets/gdvnps-banner.webp';
 	import LVLRSS from './(assets)/rating-lvl-ss.webp';
+	export const prerender = true;
 </script>
 
 <MetaBuilder

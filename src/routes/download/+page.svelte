@@ -10,6 +10,7 @@
 	import Marquee from '$lib/components/Marquee.svelte';
 	import OSIntroduce from '$lib/components/OSIntroduce.svelte';
 	import Icon from '$lib/components/Icon.svelte';
+	export const prerender = true;
 
 	const releaseQuery = createQuery({
 		queryKey: ['releases'],
