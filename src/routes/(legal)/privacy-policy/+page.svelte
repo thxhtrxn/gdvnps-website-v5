@@ -3,6 +3,7 @@
 	import MetaBuilder from '$lib/utils/MetaBuilder.svelte';
 
 	import BlurLightFilter from '$lib/components/BlurLightFilter.svelte';
+	export const prerender = true;
 </script>
 
 <MetaBuilder title="Chính sách bảo mật" desc="Chính sách bảo mật của GDVNPS" />

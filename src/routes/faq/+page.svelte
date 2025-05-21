@@ -12,6 +12,8 @@
 	onMount(() => {
 		document.documentElement.style.scrollBehavior = 'smooth';
 	});
+
+	export const prerender = true;
 </script>
 
 <MetaBuilder
