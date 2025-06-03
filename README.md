@@ -8,7 +8,7 @@ This is the official repository for GDVNPS website. This repository contains all
 
 ## What we use?
 
-- **JS Framework:** **[SvelteKit]([https://remix.run/](https://svelte.dev/docs/kit)** with **[TypeScript](https://www.typescriptlang.org/)**
+- **JS Framework:** **[SvelteKit](https://svelte.dev/docs/kit)** with **[TypeScript](https://www.typescriptlang.org/)**
 - **Styling:** **[Tailwind CSS](https://tailwindcss.com/)**
 - **Build Tool:** **[Vite](https://vite.dev/)**
 - **Deployment:** **[Vercel](https://vercel.com/)**
