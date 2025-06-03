@@ -1,38 +1,47 @@
-# sv
+# GDVNPS Offcial Website Source Code
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This repository is licensed under the **[MIT License](LICENSE)**.
 
-## Creating a project
+This is the official repository for GDVNPS website. This repository contains all the source code and assets.
 
-If you're seeing this, you've probably already done this step. Congrats!
+**Note: If you want to clone this repository to create your GDPS website, you can deploy it using a Node.js server or hosting services like **[Vercel](https://vercel.com/)**, **[Netlify](https://www.netlify.com/)**, **[Render](https://render.com/)**, etc., for a simpler setup.**
 
-```bash
-# create a new project in the current directory
-npx sv create
+## What we use?
 
-# create a new project in my-app
-npx sv create my-app
-```
+- **JS Framework:** **[SvelteKit]([https://remix.run/](https://svelte.dev/docs/kit)** with **[TypeScript](https://www.typescriptlang.org/)**
+- **Styling:** **[Tailwind CSS](https://tailwindcss.com/)**
+- **Build Tool:** **[Vite](https://vite.dev/)**
+- **Deployment:** **[Vercel](https://vercel.com/)**
+- **Others:** **[Prettier](https://prettier.io/)**, **[ESLint](https://eslint.org/)**
+## Development (for make your own GDPS website)
 
-## Developing
+### Prerequisites
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- **[Node.js](https://nodejs.org/)** **_(>= 22 LTS recommanded)_**
+- **[npm](https://www.npmjs.com/)**
 
-```bash
-npm run dev
+### Installation
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+1. Install dependencies:
 
-## Building
+   ```sh
+   npm i  # or `npm install` if you want
+   ```
 
-To create a production version of your app:
+2. Run the development server:
 
-```bash
-npm run build
-```
+   ```sh
+   npm run dev
+   ```
 
-You can preview the production build with `npm run preview`.
+3. Open your browser and navigate to http://localhost:5173
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+### Notes
+
+Below are some useful resources to assist you during development:
+
+- **[MDN Web Docs](https://developer.mozilla.org/)**
+- **[TypeScript Docs](https://www.typescriptlang.org/docs/)**
+- **[Svelte Docs](https://svelte.dev/)**
+- **[SvelteKit Docs](https://svelte.dev/docs/kit)**
+- **[Tailwind CSS Docs](https://tailwindcss.com/docs/)**
